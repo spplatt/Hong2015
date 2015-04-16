@@ -118,7 +118,7 @@ Alexander V. Prokofiev,~\IEEEmembership{Member,~IEEE}
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to analyze radiation fields at the Close User Position (CUP) and Standard User Position(SUP) for single-event effect testing. ...
+Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to analyze radiation fields at the Close User Position (CUP) and Standard User Position(SUP) for single-event effect testing. ...\todo{Revise abstract}
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ ANITA,Geant4, neutron,gamma, TSL.
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
-
+\todo{Review introduction}
 \IEEEPARstart{M}{onte} Carlo simulations of naked spallation neutron sources at Los Alamos Neutron Science Center (LANSCE) Weapons Neutron Research (WNR) Target 4\cite{Wender87} and the ANITA beam at the University of Uppsala The Svedberg Laboratory (TSL) have been completed using Geant4 and proved that Binary intranuclear cascade (INC) model gave a good representation of neutron spectra than Bertini INC model did\cite{Platt13}. Simulation result of neutron spectra using Geant4 with Binary INC model is below measurement data from ANITA neutron facility. It is likely to be influenced by our omission of collimator, shielding, and bending magnet component. This work is to verify this hypothesis is correct. In addition, we are intested in the gamma field at CUP and SUP in spallation neutron source at the ANITA neutron facility at TSL for SEE testing.
 %------------------------------------------------
 
@@ -172,36 +172,98 @@ Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
 \section{Results}
 
 In previous work Platt et al.~\cite{Platt13} reported simulations of a naked ANITA target, demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at ANITA SUP~\cite{Prokofiev2009}.
-Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.
-Fig.~\ref{fig:SUPCollimator} shows neutron fluence rate contours at the SUP position.
+Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.\todo{Review frst part of Results section -- move to introduction?}
+
+\subsection{Neutron fluence rate, spatial distribution and spectrum}
+
+Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP.
 The collimation effect is clearly visible.
 Fig.~\ref{fig:SUPProfile} compares simulated and measured neutron fluence profile at the SUP.
 Measurements were taken with a TFBC in which \U238\ is the target material~\cite{Prokofiev2009}; accordingly, simulated results were folded in energy with the neutron fission cross section for \U238~\cite{tbd}.
-The results show~\todo{Explain SUP profile results.}
+The results show~\todo{Explain SUP profile results. Include explanation of ``umbra'' and ``penumbra''}
 The predicted neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{0}{\neutron\per\cm\squared\per\second}, compared to \SI{0}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt13} and \SI{0}{\neutron\per\cm\squared\per\second} from the parameterisation~\cite{Prokofiev2009}.
-The current calculations therefore underpredict the parameterisation by tbd\%.\todo{Quantify integral yield}
+The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Quantify integral yield}
 
 \begin{figure}[t]
-    \todo{Show neutrons above \SI{10}{\MeV}}
-    \caption{Neutron yield above \SI{10}{\MeV} at the Standard User Position.}
-    \label{fig:SUPCollimator}
+    \vspace{2in}
+    \todo{Show density of neutrons above \SI{10}{\MeV} at SUP}
+    \caption{Neutron fluence rate above \SI{10}{\MeV} at the Standard User Position.}
+    \label{fig:SUPDensity}
 \end{figure}
 
 \begin{figure}[t]
+    \vspace{2in}
     \todo{Show SUP profile, compared to measurements}
     \caption{Neutron profile at the Standard User Position}
     \label{fig:SUPProfile}
 \end{figure}
 
-Fig.~\ref{fig:FirstComparison} compares calculated neutron yield versus energy in the umbra at the SUP with that predicted by the naked-target simulation~\cite{Platt13} and with the standard parameterisation of the ANITA sup spectrum~\cite{Prokofiev2009}.
+Fig.~\ref{fig:SUPSpectraComparison} compares calculated neutron yield versus energy in the umbra at the SUP with that predicted by the naked-target simulation~\cite{Platt13} and with the standard ANITA SUP parameterisation~\cite{Prokofiev2009}.
 The results show\ldots\todo{Discuss the results. Compare current with earlier calculations. Compare calculations with parameterisation.}
 
 \begin{figure}[t]
+    \vspace{2in}
 	\subfloat[Integral fluence rate]{\hspace{\columnwidth}\todo{Integral spectra on log-log axes}}\\
+    \vspace{2in}
 	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\hspace{\columnwidth}\todo{Normalised spectra on lethargy axes}}
 	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
-	\label{fig:FirstComparison}
+	\label{fig:SUPSpectraComparison}
 \end{figure}
+
+Fig.~\ref{fig:CUPDensity} and Fig.~\ref{fig:CUPProfile} show neutron spatial distribution (for neutrons above \SI{10}{\MeV}) and profile (folded in energy with the \U238\ fission cross-section) at the CUP.
+The results show\ldots\todo{Describe the results: contours and profile at CUP}
+
+\begin{figure}[t]
+    \vspace{2in}
+    \todo{Show density of neutrons above \SI{10}{\MeV} at CUP}
+    \caption{Neutron fluence rate above \SI{10}{\MeV} at the Close User Position.}
+    \label{fig:CUPDensity}
+\end{figure}
+
+\begin{figure}[t]
+    \vspace{2in}
+    \todo{Show CUP profile, compared to measurements}
+    \caption{Neutron profile at the Close User Position}
+    \label{fig:CUPProfile}
+\end{figure}
+
+Fig.~\ref{fig:CUPSpectraCOmparison} compares the spectrum calculated at the CUP with that from the standard parameterisation~\cite{Prokofiev14}.
+The latter curve is derived from MCNPX calculations supported by TOF measurements with TFBCs.
+The results show\ldots\todo{Explain what the results show: CUP measurement comparison.}
+Fig.~\ref{fig:MCComparison} provides a direct comparison between the two Monte Carlo calculations.
+The results show\ldots\todo{Explain what the results show (comparison between independent MC calculations).}
+
+\begin{figure}[t]
+    \vspace{2in}
+	\subfloat[Integral fluence rate]{\hspace{\columnwidth}\todo{Integral spectra on log-log axes: CUP}}\\
+    \vspace{2in}
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\hspace{\columnwidth}\todo{Normalised spectra on lethargy axes: CUP}}
+	\caption{Neuton spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.}
+	\label{fig:CUPSpectraComparison}
+\end{figure}
+
+\begin{figure}[t]
+    \vspace{2in}
+    \todo{Show Comparison between Geant4 and MCNPX calculations}
+    \caption{Calculated neutron spectra at the CUP-TOF position, compared to independent MCPX calculations~\cite{Prokofiev14}}
+    \label{fig:MCComparison}
+\end{figure}
+
+Fig.~\ref{fig:DifferentialSpectra} summarise neutron yield results by comparing differential flux as calculated in this work with facility parameterisations~\cite{Prokofiev2009,Prokofiev14}.
+The SUP calculations and parameterisations agree very closely below \SI{20}{\MeV}; the parameterisation exceeds the calculations somewhat above that energy.
+At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below \SI{20}{\MeV} and slightly more above that energy.\todo{Improve precision of the summary description of differential spectra.}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=3in]{DiffYieldComparedSUPCUP10.eps}
+    \caption{Differential neutron spectra at CUP and SUP, comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}}
+    \label{fig:DifferentialSpectra}
+\end{figure}
+
+\subsection{Neutron time of flight}
+
+\subsection{Gamma fluence rate, spatial distribution and dose rate}
+
 
 \subsection{Subsection One}
 \begin{figure*}[!t]
