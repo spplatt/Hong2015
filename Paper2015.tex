@@ -142,7 +142,7 @@ Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to 
 A detailed model of the ANITA geometry was implemented in Geant4.
 This is illustrated in overview in Fig.~\ref{fig:ANITAoverview}
 Description of the geometry is given in \cite{Prokofiev2009,Prokofiev14}; a summary only is given here.
-The spallation target is a tungsten cylinder of diameter \SI{0}{\cm} and length \SI{0}{\cm}.
+The spallation target is a tungsten cylinder of diameter \SI{5}{\cm} and length \SI{2.4}{\cm}.
 The target is cooled by water and surrounded by a stainless-steel cooling jacket.
 The target assembly with its cooling jacket appears as a small blue rectangle in Fig.~\ref{fig:ANITAoverview}.
 Lead shielding blocks in the target region are also modelled, and shown in red Fig.~\ref{fig:ANITAoverview}.
@@ -157,11 +157,11 @@ For brevity in this summary we only present results for the standard collimator 
 	\label{fig:ANITAoverview}
 \end{figure}
 
-Simulations were conducted using Geant4 version~TBD.
-The TBD intranuclear cascade model was selected in accordance with the results of earlier work~\cite{Platt13}, in which it performed well in simulations of neutron spallation in the region from \SIrange{0}{0}{\MeV}.\todo{Enter neutron energy range}
+Simulations were conducted using Geant4 version 10.0.
+The binary intranuclear cascade model was selected in accordance with the results of earlier work~\cite{Platt13}, in which it performed well in simulations of neutron spallation in the region from \SIrange{0}{0}{\MeV}.\todo{Enter neutron energy range}
 In the simulation protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting gamma and neutron fields were evaluated at several locations.
-In this paper results are presented for three of these: The Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre\todo{check centre}~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0}{\m} downstream of the target, and the CUP-TOF, \SI{0}{m} downstream of the target.\todo{Enter CUP \& CUP-TOF ranges}
+In this paper results are presented for three of these: The Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre\todo{check centre}~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF, \SI{0.84}{m} downstream of the target.\todo{Enter CUP \& CUP-TOF ranges}
 The SUP, CUP and CUP-TOF positions are visible in blue in Fig.~\ref{fig:ANITAoverview}.
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation using time-of-flight (TOF) techniques.
 Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
@@ -184,14 +184,16 @@ The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Q
 
 \begin{figure}[t]
     \vspace{2in}
-    \todo{Show density of neutrons above \SI{10}{\MeV} at SUP}
+    \includegraphics[width=3in]{SUP10ColSpatialDistribution10MeVRADECS.png}
+% \todo{Show density of neutrons above \SI{10}{\MeV} at SUP}
     \caption{Neutron fluence rate above \SI{10}{\MeV} at the Standard User Position.}
     \label{fig:SUPDensity}
 \end{figure}
 
 \begin{figure}[t]
     \vspace{2in}
-    \todo{Show SUP profile, compared to measurements}
+    \includegraphics[width=3in]{SUP10beamproFoldingRADECS.png}
+% \todo{Show SUP profile, compared to measurements}
     \caption{Neutron profile at the Standard User Position}
     \label{fig:SUPProfile}
 \end{figure}
@@ -201,9 +203,11 @@ The results show\ldots\todo{Discuss the results. Compare current with earlier ca
 
 \begin{figure}[t]
     \vspace{2in}
-	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes}\hspace{\columnwidth}}\\
+%	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes}\hspace{\columnwidth}}\\
+	\subfloat[Integral fluence rate]{\includegraphics[width=3in]{ANITAIntYieldRADECS.eps}\hspace{\columnwidth}}\\
     \vspace{2in}
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes}\hspace{\columnwidth}}
+%	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes}\hspace{\columnwidth}}
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\includegraphics[width=3in]{ANITALetYieldnormalisedRADECS.eps}\hspace{\columnwidth}}
 	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
 	\label{fig:SUPSpectraComparison}
 \end{figure}
@@ -213,14 +217,16 @@ The results show\ldots\todo{Describe the results: contours and profile at CUP}
 
 \begin{figure}[t]
     \vspace{2in}
-    \todo{Show density of neutrons above \SI{10}{\MeV} at CUP}
+    \includegraphics[width=3in]{CUP10ColSpatialDistribution10MeV.png}
+% \todo{Show density of neutrons above \SI{10}{\MeV} at CUP}
     \caption{Neutron fluence rate above \SI{10}{\MeV} at the Close User Position.}
     \label{fig:CUPDensity}
 \end{figure}
 
 \begin{figure}[t]
     \vspace{2in}
-    \todo{Show CUP profile, compared to measurements}
+    \includegraphics[width=3in]{CUPTOF10beamproRADECS.png}
+% \todo{Show CUP profile, compared to measurements}
     \caption{Neutron profile at the Close User Position}
     \label{fig:CUPProfile}
 \end{figure}
@@ -300,10 +306,12 @@ The results show\ldots\todo{Describe the gamma results}
     \centering
     \vspace{2in}
     \subfloat[SUP]{
+%	SUP10ColSpatialDistributionAllG
         \todo{Add gamma spatial distribution at SUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaSpatialDistributionSUP}
     }\\
     \subfloat[CUP]{
+%    CUP10ColSpatialDistributionAllG
         \todo{Add gamma spatial distribution at CUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaSpatialDistributionCUP}
     }
@@ -316,6 +324,7 @@ The results show\ldots\todo{Describe the gamma results}
     \centering
     \vspace{2in}
     \hspace{\columnwidth}
+    \includegraphics[width=3in]{gDYieldcomparedRADECS.eps}
     \caption{Calculated differential gamma spectra at CUP and SUP}
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
