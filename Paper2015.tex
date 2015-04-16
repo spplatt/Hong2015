@@ -112,7 +112,7 @@ Alexander V. Prokofiev,~\IEEEmembership{Member,~IEEE}
 %----------------------------------------------------------------------------------------
 
 \maketitle % Insert title
-
+\todo{Check title, affiliations etc.}
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
 %----------------------------------------------------------------------------------------
@@ -124,9 +124,7 @@ Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to 
 %----------------------------------------------------------------------------------------
 %	KEYWORDS
 %----------------------------------------------------------------------------------------
-\begin{IEEEkeywords}
-ANITA,Geant4, neutron,gamma, TSL.
-\end{IEEEkeywords}
+
 
 %----------------------------------------------------------------------------------------
 %	ARTICLE CONTENTS
@@ -172,7 +170,7 @@ Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
 \section{Results}
 
 In previous work Platt et al.~\cite{Platt13} reported simulations of a naked ANITA target, demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at ANITA SUP~\cite{Prokofiev2009}.
-Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.\todo{Review frst part of Results section -- move to introduction?}
+Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.\todo{Review first part of Results section -- move to introduction?}
 
 \subsection{Neutron fluence rate, spatial distribution and spectrum}
 
@@ -203,9 +201,9 @@ The results show\ldots\todo{Discuss the results. Compare current with earlier ca
 
 \begin{figure}[t]
     \vspace{2in}
-	\subfloat[Integral fluence rate]{\hspace{\columnwidth}\todo{Integral spectra on log-log axes}}\\
+	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes}\hspace{\columnwidth}}\\
     \vspace{2in}
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\hspace{\columnwidth}\todo{Normalised spectra on lethargy axes}}
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes}\hspace{\columnwidth}}
 	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
 	\label{fig:SUPSpectraComparison}
 \end{figure}
@@ -235,9 +233,9 @@ The results show\ldots\todo{Explain what the results show (comparison between in
 
 \begin{figure}[t]
     \vspace{2in}
-	\subfloat[Integral fluence rate]{\hspace{\columnwidth}\todo{Integral spectra on log-log axes: CUP}}\\
+	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes: CUP}\hspace{\columnwidth}}\\
     \vspace{2in}
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\hspace{\columnwidth}\todo{Normalised spectra on lethargy axes: CUP}}
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes: CUP}\hspace{\columnwidth}}
 	\caption{Neuton spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.}
 	\label{fig:CUPSpectraComparison}
 \end{figure}
@@ -271,9 +269,9 @@ The results show\ldots\todo{Explain what the results show.}
 
 \begin{figure}[!t]
 	\centering
-	\subfloat[At the CUP-TOF position, with \SI{3}{\cm} collimator]{\includegraphics[width=3in]{TOF3frameoverlap.eps}\todo{Add experimental data to TOF figure (CUP)}
+	\subfloat[At the CUP-TOF position, with \SI{3}{\cm} collimator]{\todo{Add experimental data to TOF figure (CUP)\includegraphics[width=3in]{TOF3frameoverlap.eps}}
 	\label{fig:TOFFrameOverlapspectrum}}\\
-	\subfloat[At the SUP, with \SI{10.2}{\cm} collimator]{\includegraphics[width=3in]{SUP10frameoverlap.eps}\todo{Add experimental data to TOF figure (SUP)}
+	\subfloat[At the SUP, with \SI{10.2}{\cm} collimator]{\todo{Add experimental data to TOF figure (SUP)}\includegraphics[width=3in]{SUP10frameoverlap.eps}
 	\label{fig:SUP10FrameOverlapspectrum}}
     \caption{Simulated neutron time of flight spectra compared to measurements}
     \label{fig:TOFSpectra}
@@ -302,11 +300,11 @@ The results show\ldots\todo{Describe the gamma results}
     \centering
     \vspace{2in}
     \subfloat[SUP]{
-        \hspace{\columnwidth}\todo{Add gamma spatial distribution at SUP, \SI{10.2}{\cm} collimator}
+        \todo{Add gamma spatial distribution at SUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaSpatialDistributionSUP}
     }\\
     \subfloat[CUP]{
-        \hspace{\columnwidth}\todo{Add gamma spatial distribution at CUP, \SI{10.2}{\cm} collimator}
+        \todo{Add gamma spatial distribution at CUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaSpatialDistributionCUP}
     }
     \caption{Gamma spatial distribution}
@@ -330,225 +328,26 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
     \centering
     \vspace{2in}
     \subfloat[SUP]{
-        \hspace{\columnwidth}\todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}
+        \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaDoseEnergySUP}
     }\\
     \subfloat[CUP]{
-        \hspace{\columnwidth}\todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}
+        \todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
         \label{fig:GammaDoseEnergyCUP}
     }
     \caption{Gamma dose spectra}
     \label{fig:GammaDoseEnergy}
 \end{figure}
 
-\subsection{Subsection One}
-\begin{figure*}[!t]
-	\centering
-	\subfloat[Geant4 modelling]{\includegraphics[width=3in]{TOFLethargylinearspace.eps}
-	\label{fig:TOFLethargylinearspace}}
-	\hfil
-	\subfloat[TSL MCNPX modelling~\cite{Prokofiev14}]{\includegraphics[width=3in]{StandardLetNYieldAtCUPTOF.eps}
-	\label{fig:StandardLethargylinearspace}}
-	\caption{Simulated spectral fluence at the CUP-TOF position for \SI{3}{\cm}, \SI{10.2}{\cm}, \SI{30}{\cm} and no collimator. The dashed line, solid line, and dotted line represent the neutron yield of collimator with diameter 3, 10.2, and \SI{30}{\cm}. The dash-dotted line represents modelling with no collimator attached.}
-	\label{fig_LethargylinearspaceFor4collimators}
-\end{figure*}
 
-Fig.~\ref{fig_LethargylinearspaceFor4collimators} shows
-
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=3in]{SUPcomparedlinearspace.eps}
-	\caption{Simulated spectral yield at the SUP for \SI{3}{\cm}, \SI{10.2}{\cm}, and \SI{30}{\cm} collimators}
-	\label{fig:SUPcomparedlinearspace}
-\end{figure}
-
-\subsection{Subsection Two}
-\begin{figure*}[!t]
-	\centering
-	\subfloat[Differential]{\includegraphics[width=3in]{DiffYieldComparedSUPCUP10.eps}
-	\label{fig:DiffYieldComparedSUPCUP10}}
-	\hfil
-	\subfloat[Integral]{\includegraphics[width=3in]{IntYieldComparedSUPCUP10.eps}
-	\label{fig:IntYieldComparedSUPCUP10}}
-	\caption{Comparison of Geant4 simulated spectral fluence with analytical model at the SUP and the CUP with \SI{10.2}{\cm} collimator~\cite{Prokofiev2009,Prokofiev14}}
-	\label{fig:NYieldComparedSUPCUP10}
-\end{figure*}
-
-\subsection{Subsection Three}
-
-
-\subsection{Subsection Four, time of flight spectrum}
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[Time of flight spectrum at the CUP-TOF position, with \SI{3}{\cm} collimator]{\includegraphics[width=3in]{TOF3frameoverlap.eps}
-	\label{fig:TOFFrameOverlapspectrum}}
-	\vfil
-	\subfloat[Time of flight spectrum at the SUP, with \SI{10.2}{\cm} collimator]{\includegraphics[width=3in]{SUP10frameoverlap.eps}
-	\label{fig:SUP10FrameOverlapspectrum}}
-\end{figure}
-
-\subsection{Subsection Five, beam profile folding with $^{238}U(n,f)$ cross-section}
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[\SI{3}{\cm} collimator]{\includegraphics[width=2.5in]{CUPTOF3beampro.png}
-	\label{fig:CUPTOF3beampro}}
-	\hfil
-	\subfloat[\SI{10.2}{\cm} collimator]{\includegraphics[width=2.5in]{CUPTOF10beampro.png}
-	\label{fig:CUPTOF10beampro}}
-	\hfil
-	\subfloat[\SI{30}{\cm} collimator]{\includegraphics[width=2.5in]{CUPTOF30beampro.png}
-	\label{fig:CUPTOF30beampro}}
-	\caption{Neutron beam profiles folding with $^{238}U(n,f)$ cross-section at the CUP-TOF position with \SI{3}{\cm}, \SI{10.2}{\cm}, and \SI{30}{\cm} collimator}
-	\label{fig:CUPTOFbeamprofileFolding}
-\end{figure}
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[\SI{3}{\cm} collimator]{\includegraphics[width=2.5in]{SUP3beamproFolding.png}
-	\label{fig:SUP3beamproFolding}}
-	\hfill
-	\subfloat[\SI{10.2}{\cm} collimator]{\includegraphics[width=2.5in]{SUP10beamproFolding.png}
-	\label{fig:SUP10beamproFolding}}
-	\hfill
-	\subfloat[\SI{30}{\cm} collimator]{\includegraphics[width=2.5in]{SUP30beamproFolding.png}
-	\label{fig:SUP30beamproFolding}}
-	\caption{Neutron beam profile folding with $^{238}U(n,f)$ cross-section at the SUP with \SI{3}{\cm}, \SI{10.2}{\cm}, and \SI{30}{\cm} collimator}
-	\label{fig:SUPbeamprofileFolding}
-\end{figure}
-
-Fig.~\ref{fig:CUPTOFbeamprofileFolding} shows
-
-%\begin{equation}
-%\label{eq:emc}
-%e = mc^2
-%\end{equation}
-
-\subsection{Gamma, subsection one : Spatial distribution}
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[\SI{3}{\cm} collimator]{\includegraphics[width=3in]{CUP3ColSpatialDistributionAllG}
-	\label{fig:CUP3SpatialDistributionAllG}}
-	\hfil
-	\subfloat[\SI{10.2}{\cm} collimator]{\includegraphics[width=3in]{CUP10ColSpatialDistributionAllG}
-	\label{fig:CUP10SpatialDistributionAllG}}
-	\caption{Gamma spatial distribution at the CUP with \SI{3}{\cm}, and \SI{10.2}{\cm} collimator~\cite{Prokofiev2009,Prokofiev14}}
-	\label{fig:gCUPSpatialDistribution}
-\end{figure}
-
-
-\begin{table}[!tbp]
-\caption[{$\gamma$ yield for each collimator in a radius of \SI{5}{\cm} at the CUP}]{$\gamma$ yield for each collimator at the CUP}	%title of the table
-\centering
-\label{table:GYieldCUP}
-\begin{tabular}{lcc}
-	\hline% insert double-line
-	Collimator size   & above \SI{1}{\MeV}   &  above \SI{0.1}{\MeV}  \\
-	\cmidrule(r){2-3}
-/\si{\cm}       & /\SI{e-6}{\photon\per\cm\squared\per\proton} & /\SI{e-6}{\photon\per\cm\squared\per\proton} \\
-\hline % insert single-line
-3 & 4.93 & 15.73\\
-
-10.2 & 4.86  &  15.27\\
-
-30 & 4.44  &  13.80\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!tbp]
-\caption[$\gamma$ yield for each collimator in umbra region at the SUP]{$\gamma$ yield for each collimator in umbra region at the SUP}	%title of the table
-\centering
-\label{table:GYieldSUP}
-\begin{tabular}{l	c	c}
-\hline% insert double-line
-Collimator size   & above \SI{1}{\MeV}   &  above \SI{0.1}{\MeV}   \\
-\cmidrule(r){2-3}
-/\si{\cm}       & \/\SI{e-6}{\photon\per\cm\squared\per\proton} &  /\SI{e-6}{\photon\per\cm\squared\per\proton} \\
-\hline % insert single-line
-3 & 2.3 & 6.7\\
-
-10.2 & 2.8  &  8.3\\
-
-30 & 3.2  &  9.4\\
-\hline
-\end{tabular}
-\end{table}
-
-
-\subsection{Gamma, subsection two : Photon spectra at the CUP and SUP }
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[CUP]{\includegraphics[width=3in]{gCUPDYieldcompared}
-	\label{fig:gCUPDYieldcompared}}
-	\vfil
-	\subfloat[SUP]{\includegraphics[width=3in]{gSUPDYieldcompared}
-	\label{fig:gSUPDYieldcompared}}
-	\caption{Comparison of differential photon yield at the CUP and SUP}
-	\label{fig:gDYieldspectra}
-\end{figure}
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[CUP]{\includegraphics[width=3in]{gCUPIYieldcompared}
-	\label{fig:gCUPIYieldcompared}}
-	\vfil
-	\subfloat[SUP]{\includegraphics[width=3in]{gSUPIYieldcompared}
-	\label{fig:gSUPIYieldcompared}}
-	\caption{Comparison of integral photon yield at the CUP and SUP}
-	\label{fig:gIYieldspectra}
-\end{figure}
-Figure~\ref{fig:gIYieldspectra} displayed integral photon spectra at the CUP and SUP. The photon spectra at the SUP with \SI{3}{\cm} collimator, it is dominated by energy within about \SI{7}{\MeV} at the SUP, see Figure~\ref{fig:gSUPIYieldcompared}.
-
-\begin{table}
-\caption{$\gamma$ dose rate for each collimator at the CUP and SUP}	%title of the table
-\centering
-\label{Table:DoseRate}
-        \begin{tabular}{l c c}
-            \toprule
-            {collimator diameter}   &{CUP}         &{SUP}\\
-            {\si{\centi\metre}}    &{\si{mSvh^{-1}}}   &{\si{mSvh^{-1}}}\\
-            \midrule
-            3                       & 378.0                	& 17.32\\
-            10.2                  & 369.4               	& 20.90\\
-            30                     & 336.4          		& 23.65\\
-            \bottomrule
-\end{tabular}
-\end{table}
-
-
-\begin{figure}[!t]
-	\centering
-	\subfloat[CUP]{\includegraphics[width=2.5in]{DoseVSenergyCUP.eps}
-	\label{fig:DoseVSenergyCUP}}
-	\hfil
-	\subfloat[SUP]{\includegraphics[width=2.5in]{DoseVSenergySUP.eps}
-	\label{fig:DoseVSenergySUP}}
-	\caption{Dose versus energy at the CUP and SUP with \SI{3}{\cm}, \SI{10.2}{\cm}, and \SI{30}{\cm} collimators}
-	\label{fig:DoseVSenergy}
-\end{figure}
-
-%------------------------------------------------
 \section{Discussion}
-
-\subsection{Subsection One}
-
-Neutron .....
-
-\subsection{Subsection Two}
-
-Gamma .....
-
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
+\todo{Discussion}
 
 \ifCLASSOPTIONcaptionsoff
   \newpage
 \fi
+
+\todo{Complete citations}
 
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
