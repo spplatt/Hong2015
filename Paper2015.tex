@@ -262,8 +262,37 @@ At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below
 
 \subsection{Neutron time of flight}
 
-\subsection{Gamma fluence rate, spatial distribution and dose rate}
+Neutron beam monitoring and characterisation at TSL uses time-of flight measurements with \U238\ TFBCs.
+Our Geant4 model permits these measurements to be simulated.
+Neutron time of flight data from the simulation (time measured from the time of arrival of primary photons at the target to the time of arrival of secondary neutrons at the point of interest) were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
+Results are for SUP and CUP-TOF positions and compared with measurements~\cite{Prokofiev2009,Prokofiev14} in Fig.~\ref{fig:TOFSpectra}.
+The simulated CUP-TOF results were calculated for the \SI{3}{\cm} collimator, to match the available measured data.
+The results show\ldots\todo{Explain what the results show.}
 
+\begin{figure}[!t]
+	\centering
+	\subfloat[At the CUP-TOF position, with \SI{3}{\cm} collimator]{\includegraphics[width=3in]{TOF3frameoverlap.eps}\todo{Add experimental data to TOF figure (CUP)}
+	\label{fig:TOFFrameOverlapspectrum}}\\
+	\subfloat[At the SUP, with \SI{10.2}{\cm} collimator]{\includegraphics[width=3in]{SUP10frameoverlap.eps}\todo{Add experimental data to TOF figure (SUP)}
+	\label{fig:SUP10FrameOverlapspectrum}}
+    \caption{Simulated neutron time of flight spectra compared to measurements}
+    \label{fig:TOFSpectra}
+\end{figure}
+
+Prokofiev et at.~\cite{Prokofiev14} explain the TOF spectrum upstream of the collimator as being the resultant of three components: directly from the target, scattered from the target surroundings, and backscattered from the collimator front face.
+The complex flight paths and energy losses in the scattered components break the one-to-one relationship between neutron energy and neutron time of flight from target to detector.
+We are able to reproduce this situation in our simulation, as shown by Fig.~\ref{fig:TOF3Componentslinear}, which shows good agreement with\ldots\todo{Complete description of the three components.}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=3in]{TOF3Componentslinear.eps}
+	\caption{
+    Simulated neutron yield with \SI{3}{\cm} collimator at the CUP-TOF position.
+    The three components are directly from the target, scattered forward from the target surroundings, and scattered back from the collimator front wall.}
+	\label{fig:TOF3Componentslinear}
+\end{figure}
+
+\subsection{Gamma fluence rate, spatial distribution and dose rate}
 
 \subsection{Subsection One}
 \begin{figure*}[!t]
@@ -299,12 +328,7 @@ Fig.~\ref{fig_LethargylinearspaceFor4collimators} shows
 \end{figure*}
 
 \subsection{Subsection Three}
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=3in]{TOF3Componentslinear.eps}
-	\caption{Simulated neutron yield with \SI{3}{\cm} collimator at the CUP-TOF position and three components. The dashed line, dotted line, dash-dotted line represent neutrons directly from the target, frontal wall component, and surroundings component, respectively. The solid line represents the sum of the DC, FWC, and SC components, which is the neutron yield with \SI{3}{\cm} collimator at the CUP-TOF position, in the lethargy scale.}
-	\label{fig:TOF3Componentslinear}
-\end{figure}
+
 
 \subsection{Subsection Four, time of flight spectrum}
 
