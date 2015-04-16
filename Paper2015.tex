@@ -74,17 +74,21 @@
 %
 \usepackage{url}
 
-
 \usepackage{siunitx}
 \DeclareSIUnit\photon{\ensuremath{\gamma}}
 \DeclareSIUnit\proton{p}
 \DeclareSIUnit\neutron{n}
+
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{subfig}
 
 \usepackage{todo}
+
+\usepackage{bpchem}
+\def\U238{\BPChem{\^{238}U}}
+
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
@@ -146,6 +150,7 @@ The target assembly with its cooling jacket appears as a small blue rectangle in
 Lead shielding blocks in the target region are also modelled, and shown in red Fig.~\ref{fig:ANITAoverview}.
 A large electromagnet surrounding the target is modelled and shown in Fig.~\ref{fig:ANITAoverview} in grey (iron) and yellow (copper).
 An iron collimator with variable apertures is modelled  and shown downstream of the target (grey).
+For brevity in this summary we only present results for the standard collimator size (\SI{10.2}{\cm} diameter); in the final paper we will present results for cylindrical collimators in the range from \SIrange{3}{30}{\cm} diameter.
 
 \begin{figure}[!t]
 	\centering
@@ -155,56 +160,45 @@ An iron collimator with variable apertures is modelled  and shown downstream of 
 \end{figure}
 
 Simulations were conducted using Geant4 version~TBD.
-The TBD intranuclear cascade model was selected in accordance with the results of earlier work~\cite{Platt13}, in which it performed well in simulations of neutron spallation in the region from \SIrange{0}{0}{\MeV}.
+The TBD intranuclear cascade model was selected in accordance with the results of earlier work~\cite{Platt13}, in which it performed well in simulations of neutron spallation in the region from \SIrange{0}{0}{\MeV}.\todo{Enter neutron energy range}
 In the simulation protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting gamma and neutron fields were evaluated at several locations.
-In this paper results are presented for three of these: The Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre (check centre)~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0}{\m} downstream of the target, and the CUP-TOF, \SI{0}{m} downstream of the target.
+In this paper results are presented for three of these: The Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre\todo{check centre}~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0}{\m} downstream of the target, and the CUP-TOF, \SI{0}{m} downstream of the target.\todo{Enter CUP \& CUP-TOF ranges}
 The SUP, CUP and CUP-TOF positions are visible in blue in Fig.~\ref{fig:ANITAoverview}.
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation using time-of-flight (TOF) techniques.
 Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
-
-
-
-\begin{table}[!tbp]
-\caption{Neutron yield under the umbra region at the standard user position}	%title of the table
-	\label{table:NYieldRadiusEffectAtSUP}
-	\centering
-	\begin{tabular}{l c c c}
-		\toprule
-          {collimator}   		&{$< \SI{1}{\MeV}$}	&{$\geq 1 \& <\SI{10}{\MeV}$}	&{$\geq \SI{10}{\MeV}$}\\
-          \cmidrule(r){2-4}
-          {\si{\centi\metre}}	&						&{\SI{1e-6}{\neutron\per\cm\squared\per\proton}}	&\\
-          \midrule
-		3 		& 0.833 	& 0.975	& 0.525\\
-		10.2 	& 1.394 	& 1.248	& 0.525\\
-		30 		& 1.962 	& 1.555	& 0.650\\
-           \bottomrule
-	\end{tabular}
-\end{table}
 
 %------------------------------------------------
 \section{Results}
 
 In previous work Platt et al.~\cite{Platt13} reported simulations of a naked ANITA target, demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at ANITA SUP~\cite{Prokofiev2009}.
-Part of the motivation for this work was to investigate whether improvements in the fidelity of the Geant4 model would lead to increased quantitative agreement.
-Fig.~\ref{fig:SUPCollimator}
+Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.
+Fig.~\ref{fig:SUPCollimator} shows neutron fluence rate contours at the SUP position.
+The collimation effect is clearly visible.
+Fig.~\ref{fig:SUPProfile} compares simulated and measured neutron fluence profile at the SUP.
+Measurements were taken with a TFBC in which \U238\ is the target material~\cite{Prokofiev2009}; accordingly, simulated results were folded in energy with the neutron fission cross section for \U238~\cite{tbd}.
+The results show~\todo{Explain SUP profile results.}
+The predicted neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{0}{\neutron\per\cm\squared\per\second}, compared to \SI{0}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt13} and \SI{0}{\neutron\per\cm\squared\per\second} from the parameterisation~\cite{Prokofiev2009}.
+The current calculations therefore underpredict the parameterisation by tbd\%.\todo{Quantify integral yield}
 
-\begin{figure}
-    \todo{}
-    \caption{Neutron field at the Standard User Position downstream of the \SI{10.2}{\cm} collimator}
+\begin{figure}[t]
+    \todo{Show neutrons above \SI{10}{\MeV}}
+    \caption{Neutron yield above \SI{10}{\MeV} at the Standard User Position.}
     \label{fig:SUPCollimator}
 \end{figure}
 
-\begin{figure}
-    \todo{}
-    \caption{Neutron profile at the Standard User Position downstream of the \SI{10.2}{\cm} collimator}
+\begin{figure}[t]
+    \todo{Show SUP profile, compared to measurements}
+    \caption{Neutron profile at the Standard User Position}
     \label{fig:SUPProfile}
 \end{figure}
 
-Fig.~\ref{fig:FirstComparison}\ldots
+Fig.~\ref{fig:FirstComparison} compares calculated neutron yield versus energy in the umbra at the SUP with that predicted by the naked-target simulation~\cite{Platt13} and with the standard parameterisation of the ANITA sup spectrum~\cite{Prokofiev2009}.
+The results show\ldots\todo{Discuss the results. Compare current with earlier calculations. Compare calculations with parameterisation.}
 
-\begin{figure}
-	\todo{Here we need figures showing the integral spectra on log-log plots and equilethargic spectra normalised to unit area above \SI{10}{\MeV}}
+\begin{figure}[t]
+	\subfloat[Integral fluence rate]{\hspace{\columnwidth}\todo{Integral spectra on log-log axes}}\\
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\hspace{\columnwidth}\todo{Normalised spectra on lethargy axes}}
 	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
 	\label{fig:FirstComparison}
 \end{figure}
@@ -451,4 +445,4 @@ Prokofiev, A.V. and Passoth, E. and Hjalmarsson, A. and Majerle, M.,
 
 \todos
 
-\end{document}
+\end{document} 
