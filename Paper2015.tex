@@ -186,9 +186,6 @@ Fig.~\ref{fig:CUPSpectraComparison} compares the spectrum calculated at the CUP 
 The latter curve is derived from MCNPX calculations supported by TOF measurements with TFBCs.
 The results show\ldots
 \todo{Explain what the results show: CUP measurement comparison.}
-Fig.~\ref{fig:MCComparison} provides a direct comparison between the two Monte Carlo calculations.
-The results show\ldots
-\todo{Explain what the results show (comparison between independent MC calculations).}
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
@@ -205,15 +202,6 @@ The results show\ldots
         Neutron spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.
     }
 	\label{fig:CUPSpectraComparison}
-\end{figure}
-
-\begin{figure}[t]
-    \includegraphics[width=\columnwidth]{TOFcomparedLetFluxRADECS.png}
-    \caption{
-        Calculated neutron spectra at the CUP-TOF position, compared to independent MCPX calculations~\cite{Prokofiev14}
-    }
-    \label{fig:MCComparison}
-    \todo{Show Comparison between Geant4 and MCNPX calculations}
 \end{figure}
 
 Fig.~\ref{fig:DifferentialSpectra} summarise neutron yield results by comparing differential flux as calculated in this work with facility parameterisations~\cite{Prokofiev2009,Prokofiev14}.
@@ -284,12 +272,14 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
+        \centering
         \includegraphics[width=0.9\columnwidth]{DoseVSenergySUP.eps}
         \subcaption{SUP}
         \label{fig:GammaDoseEnergySUP}
         \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}
     \end{minipage}
     \begin{minipage}{\columnwidth}
+        \centering
         \includegraphics[width=0.9\columnwidth]{DoseVSenergyCUP.eps}
         \subcaption{CUP}
         \label{fig:GammaDoseEnergyCUP}
