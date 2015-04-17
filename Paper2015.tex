@@ -39,8 +39,6 @@
 
 \usepackage{caption}
 \usepackage{subcaption}
-\captionsetup{margin={0pt,20pt}}
-\captionsetup[sub]{margin={0pt,20pt}}
 
 \usepackage{todo}
 %\renewcommand\todo[1]{\relax}
@@ -149,11 +147,13 @@ The results show\ldots
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{SUPComparedIFluxRADECS.eps}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{SUPComparedIFluxRADECS.eps}
         \subcaption{Integral fluence rate}
     \end{minipage}
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{SUPNormalisedRADECS.eps}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{SUPNormalisedRADECS.eps}
         \subcaption{Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}}
     \end{minipage}
 	\caption{
@@ -192,14 +192,14 @@ The results show\ldots
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{ANITAIntYieldRADECS.eps}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{ANITAIntYieldRADECS.eps}
         \subcaption{Integral fluence rate}
-        \todo{Integral spectra on log-log axes: CUP}
     \end{minipage}
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{ANITALetYieldnormalisedRADECS.eps}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{ANITALetYieldnormalisedRADECS.eps}
     	\subcaption{Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}}
-        \todo{Normalised spectra on lethargy axes: CUP}
     \end{minipage}
 	\caption{
         Neutron spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.
@@ -223,7 +223,7 @@ At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\columnwidth]{DiffYieldComparedSUPCUP10.eps}
+    \includegraphics[width=0.9\columnwidth]{DiffYieldComparedSUPCUP10.eps}
     \caption{
         Differential neutron spectra at CUP and SUP, comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}
     }
@@ -271,7 +271,7 @@ The results show\ldots
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=\columnwidth]{gDYieldcomparedRADECS.eps}
+    \includegraphics[width=0.9\columnwidth]{gDYieldcomparedRADECS.eps}
     \caption{Calculated differential gamma spectra at CUP and SUP}
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
@@ -284,13 +284,13 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{DoseVSenergySUP.eps}
+        \includegraphics[width=0.9\columnwidth]{DoseVSenergySUP.eps}
         \subcaption{SUP}
         \label{fig:GammaDoseEnergySUP}
         \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}
     \end{minipage}
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{DoseVSenergyCUP.eps}
+        \includegraphics[width=0.9\columnwidth]{DoseVSenergyCUP.eps}
         \subcaption{CUP}
         \label{fig:GammaDoseEnergyCUP}
         \todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}
