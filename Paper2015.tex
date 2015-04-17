@@ -1,24 +1,9 @@
 % Paper 2015
 \documentclass[11pt,a4paper]{IEEEtran}
 
-% *** MISC UTILITY PACKAGES ***
-%
 \usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-   % pdf code
- %\else
-   % dvi code
-% \fi
-
-% *** CITATION PACKAGES ***
-%
 \usepackage{cite}
 
-% *** GRAPHICS RELATED PACKAGES ***
-%
 \ifCLASSINFOpdf
    \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
@@ -38,31 +23,10 @@
    \DeclareGraphicsExtensions{.eps}
 \fi
 
-% *** MATH PACKAGES ***
-%
 \usepackage[cmex10]{amsmath}
 
-% *** SPECIALIZED LIST PACKAGES ***
-%
-\usepackage{algorithmic}
-
-% *** ALIGNMENT PACKAGES ***
-%
 \usepackage{array}
-
-
-% *** SUBFIGURE PACKAGES ***
-\ifCLASSOPTIONcompsoc
-  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-\else
-  \usepackage[caption=false,font=footnotesize]{subfig}
-\fi
-
-% *** FLOAT PACKAGES ***
-%
 \usepackage{fixltx2e}
-
-\usepackage{stfloats}
 
 \ifCLASSOPTIONcaptionsoff
   \usepackage[nomarkers]{endfloat}
@@ -70,8 +34,6 @@
 \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
 \fi
 
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
 \usepackage{url}
 
 \usepackage{siunitx}
@@ -80,11 +42,18 @@
 \DeclareSIUnit\neutron{n}
 
 \usepackage{booktabs}
+
 \usepackage{graphicx}
 \usepackage{epstopdf}
-\usepackage{subfig}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup{margin={0pt,20pt}}
+\captionsetup[sub]{margin={0pt,20pt}}
 
 \usepackage{todo}
+%\renewcommand\todo[1]{\relax}
+%\renewcommand\todos{\relax}
 
 \usepackage{bpchem}
 \def\U238{\BPChem{\^{238}U}}
@@ -138,10 +107,12 @@ In this paper results are presented for three of these: the Standard User Positi
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation using time-of-flight (TOF) techniques.
 Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
 
-\begin{figure}[!t]
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=3in]{overview.png}
-	\caption{Simulated ANITA facility overview seen from above (yellow: bending magnet; red: shielding components; blue: target cooling jacket (enclosing the target); grey: collimator; blue: detector system)}
+	\includegraphics[width=2.5in]{overview.png}
+	\caption{
+        Simulated ANITA facility overview seen from above (yellow: bending magnet; red: shielding components; blue: target cooling jacket (enclosing the target); grey: collimator; blue: detector system)
+    }
 	\label{fig:ANITAoverview}
 \end{figure}
 
@@ -158,7 +129,7 @@ Within the beam umbra the predicted neutron fluence rate above \SI{10}{\MeV} at 
 The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Quantify integral yield}
 
 \begin{figure}[t]
-    \includegraphics[width=3in]{SUP10ColSpatialDistribution10MeVRADECS.png}
+    \includegraphics[width=2.5in]{SUP10ColSpatialDistribution10MeVRADECS.png}
     \caption{
         Spatial distribution of neutrons above \SI{10}{\MeV} at the SUP.
         Concentric white circles indicate nominal umbra and penumbra limits.
@@ -167,7 +138,7 @@ The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Q
 \end{figure}
 
 \begin{figure}[t]
-    \includegraphics[width=3in]{SUP10beamproFoldingRADECS.png}
+    \includegraphics[width=2.5in]{SUP10beamproFoldingRADECS.png}
     \caption{
         Neutron profile at the SUP, normalised to fluence rate on axis.
         Vertical lines indicate nominal umbra and penumbra limits.
@@ -176,51 +147,75 @@ The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Q
 \end{figure}
 
 Fig.~\ref{fig:SUPSpectraComparison} compares calculated neutron yield versus energy in the umbra at the SUP with that predicted by the naked-target simulation~\cite{Platt13} and with the standard ANITA SUP parameterisation~\cite{Prokofiev2009}.
-The results show\ldots\todo{Discuss the results. Compare current with earlier calculations. Compare calculations with parameterisation.}
+The results show\ldots
+\todo{Discuss the results. Compare current with earlier calculations. Compare calculations with parameterisation.}
 
 \begin{figure}[t]
-	\subfloat[Integral fluence rate]{\includegraphics[width=3in]{ANITAIntYieldRADECS.eps}}\\
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\includegraphics[width=3in]{ANITALetYieldnormalisedRADECS.eps}}
-	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
+    \begin{minipage}{\columnwidth}
+        \includegraphics[width=2.5in]{ANITAIntYieldRADECS.eps}
+        \subcaption{Integral fluence rate}
+    \end{minipage}
+    \begin{minipage}{\columnwidth}
+        \includegraphics[width=2.5in]{ANITALetYieldnormalisedRADECS.eps}
+        \subcaption{Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}}
+    \end{minipage}
+	\caption{
+        Neutron spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.
+    }
 	\label{fig:SUPSpectraComparison}
 \end{figure}
 
 Fig.~\ref{fig:CUPDensity} and Fig.~\ref{fig:CUPProfile} show neutron spatial distribution (for neutrons above \SI{10}{\MeV}) and profile (folded in energy with the \U238\ fission cross-section) at the CUP.
-The results show\ldots\todo{Describe the results: contours and profile at CUP}
+The results show\ldots
+\todo{Describe the results: contours and profile at CUP}
 
 \begin{figure}[t]
-    \includegraphics[width=3in]{CUP10ColSpatialDistribution10MeV.png}
+    \centering
+    \includegraphics[width=2.5in]{CUP10ColSpatialDistribution10MeV.png}
 % \todo{Show density of neutrons above \SI{10}{\MeV} at CUP}
-    \caption{Spatial distribution of neutrons above \SI{10}{\MeV} at the Close User Position.}
+    \caption{Spatial distribution of neutrons above \SI{10}{\MeV} at the CUP}
     \label{fig:CUPDensity}
 \end{figure}
 
 \begin{figure}[t]
-    \includegraphics[width=3in]{CUPTOF10beamproRADECS.png}
-% \todo{Show CUP profile, compared to measurements}
-    \caption{Neutron profile at the Close User Position}
+    \centering
+    \includegraphics[width=2.5in]{CUPTOF10beamproRADECS.png}
+    % \todo{Show CUP profile, compared to measurements}
+    \caption{Neutron profile at the CUP}
     \label{fig:CUPProfile}
 \end{figure}
 
-Fig.~\ref{fig:CUPSpectraCOmparison} compares the spectrum calculated at the CUP with that from the standard parameterisation~\cite{Prokofiev14}.
+Fig.~\ref{fig:CUPSpectraComparison} compares the spectrum calculated at the CUP with that from the standard parameterisation~\cite{Prokofiev14}.
 The latter curve is derived from MCNPX calculations supported by TOF measurements with TFBCs.
-The results show\ldots\todo{Explain what the results show: CUP measurement comparison.}
+The results show\ldots
+\todo{Explain what the results show: CUP measurement comparison.}
 Fig.~\ref{fig:MCComparison} provides a direct comparison between the two Monte Carlo calculations.
-The results show\ldots\todo{Explain what the results show (comparison between independent MC calculations).}
+The results show\ldots
+\todo{Explain what the results show (comparison between independent MC calculations).}
 
 \begin{figure}[t]
-    \vspace{2in}
-	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes: CUP}\hspace{\columnwidth}}\\
-    \vspace{2in}
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes: CUP}\hspace{\columnwidth}}
-	\caption{Neuton spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.}
+    \begin{minipage}{\columnwidth}
+        \todo{Integral spectra on log-log axes: CUP}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+    	\subcaption{Integral fluence rate}
+    \end{minipage}
+    \begin{minipage}{\columnwidth}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+        \todo{Normalised spectra on lethargy axes: CUP}
+    	\subcaption{Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}}
+    \end{minipage}
+	\caption{
+        Neutron spectrum at the Close User Position, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from this work.
+    }
 	\label{fig:CUPSpectraComparison}
 \end{figure}
 
 \begin{figure}[t]
-    \vspace{2in}
     \todo{Show Comparison between Geant4 and MCNPX calculations}
-    \caption{Calculated neutron spectra at the CUP-TOF position, compared to independent MCPX calculations~\cite{Prokofiev14}}
+    %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+    \caption{
+        Calculated neutron spectra at the CUP-TOF position, compared to independent MCPX calculations~\cite{Prokofiev14}
+    }
     \label{fig:MCComparison}
 \end{figure}
 
@@ -230,13 +225,14 @@ At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=3in]{DiffYieldComparedSUPCUP10.eps}
-    \caption{Differential neutron spectra at CUP and SUP, comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}}
+    \includegraphics[width=2.5in]{DiffYieldComparedSUPCUP10.eps}
+    \caption{
+        Differential neutron spectra at CUP and SUP, comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}
+    }
     \label{fig:DifferentialSpectra}
 \end{figure}
 
 \subsection{Neutron time of flight}
-
 Neutron beam monitoring and characterisation at TSL uses time-of flight measurements with \U238\ TFBCs.
 Our Geant4 model permits these measurements to be simulated.
 Neutron time of flight data from the simulation (time measured from the time of arrival of primary photons at the target to the time of arrival of secondary neutrons at the point of interest) were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
@@ -244,12 +240,19 @@ Results are for SUP and CUP-TOF positions and compared with measurements~\cite{P
 The simulated CUP-TOF results were calculated for the \SI{3}{\cm} collimator, to match the available measured data.
 The results show\ldots\todo{Explain what the results show.}
 
-\begin{figure}[!t]
-	\centering
-	\subfloat[At the CUP-TOF position, with \SI{3}{\cm} collimator]{\todo{Add experimental data to TOF figure (CUP)\includegraphics[width=3in]{TOF3frameoverlap.eps}}
-	\label{fig:TOFFrameOverlapspectrum}}\\
-	\subfloat[At the SUP, with \SI{10.2}{\cm} collimator]{\todo{Add experimental data to TOF figure (SUP)}\includegraphics[width=3in]{SUP10frameoverlap.eps}
-	\label{fig:SUP10FrameOverlapspectrum}}
+\begin{figure}[t]
+    \begin{minipage}{\columnwidth}
+        \todo{Add experimental data to TOF figure (CUP)}
+        \includegraphics[width=2.5in]{TOF3frameoverlap.eps}
+        \subcaption{At the CUP-TOF position, with \SI{3}{\cm} collimator}
+    	\label{fig:TOFFrameOverlapspectrum}
+    \end{minipage}
+    \begin{minipage}{\columnwidth}
+        \todo{Add experimental data to TOF figure (SUP)}
+        \includegraphics[width=2.5in]{SUP10frameoverlap.eps}
+        \subcaption{At the SUP, with \SI{10.2}{\cm} collimator}
+        \label{fig:SUP10FrameOverlapspectrum}
+    \end{minipage}
     \caption{Simulated neutron time of flight spectra compared to measurements}
     \label{fig:TOFSpectra}
 \end{figure}
@@ -258,34 +261,34 @@ Prokofiev et at.~\cite{Prokofiev14} explain the TOF spectrum upstream of the col
 The complex flight paths and energy losses in the scattered components break the one-to-one relationship between neutron energy and neutron time of flight from target to detector.
 We are able to reproduce this situation in our simulation, as shown by Fig.~\ref{fig:TOF3Componentslinear}, which shows good agreement with\ldots\todo{Complete description of the three components.}
 
-\begin{figure}[!t]
+\begin{figure}[t]
 	\centering
-	\includegraphics[width=3in]{TOF3Componentslinear.eps}
+	\includegraphics[width=2.5in]{TOF3Componentslinear.eps}
 	\caption{
-    Simulated neutron yield with \SI{3}{\cm} collimator at the CUP-TOF position.
-    The three components are directly from the target, scattered forward from the target surroundings, and scattered back from the collimator front wall.}
+        Simulated neutron yield with \SI{3}{\cm} collimator at the CUP-TOF position.
+        The three components are directly from the target, scattered forward from the target surroundings, and scattered back from the collimator front wall.
+    }
 	\label{fig:TOF3Componentslinear}
 \end{figure}
 
 \subsection{Gamma fluence rate, spatial distribution and dose rate}
-
 Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP.
 Fig.~\ref{fig:DifferentialGammaSpectra} shows the calculated differential gamma spectra within the central region of the spatial distribution.
 The results show\ldots\todo{Describe the gamma results}
 
 \begin{figure}[t]
-    \centering
-    \vspace{2in}
-    \subfloat[SUP]{
-%	SUP10ColSpatialDistributionAllG
-        \todo{Add gamma spatial distribution at SUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
+    \begin{minipage}{\columnwidth}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+        \todo{Add gamma spatial distribution at SUP, \SI{10.2}{\cm} collimator}
+        \subcaption{SUP}
         \label{fig:GammaSpatialDistributionSUP}
-    }\\
-    \subfloat[CUP]{
-%    CUP10ColSpatialDistributionAllG
-        \todo{Add gamma spatial distribution at CUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
+    \end{minipage}
+    \begin{minipage}{\columnwidth}
+        \todo{Add gamma spatial distribution at CUP, \SI{10.2}{\cm} collimator}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+        \subcaption{CUP}
         \label{fig:GammaSpatialDistributionCUP}
-    }
+    \end{minipage}
     \caption{Gamma spatial distribution}
     \todo{It would be better if gamma spatial distribution were expressed as dose, rather than number of photons. Not in time for the abstract submission, however!}
     \label{fig:GammaSpatialDistribution}
@@ -293,7 +296,7 @@ The results show\ldots\todo{Describe the gamma results}
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=3in]{gDYieldcomparedRADECS.eps}
+    \includegraphics[width=2.5in]{gDYieldcomparedRADECS.eps}
     \caption{Calculated differential gamma spectra at CUP and SUP}
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
@@ -303,16 +306,18 @@ The results show\ldots\todo{Describe the gamma dose versus energy graphs.}
 The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\milli\gray\per\hour} at SUP and \SI{370}{\milli\gray\per\hour} at CUP.\todo{Discuss calculated dose rates}
 
 \begin{figure}[t]
-    \centering
-    \vspace{2in}
-    \subfloat[SUP]{
-        \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
+    \begin{minipage}{\columnwidth}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+        \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}
+        \subcaption{SUP}
         \label{fig:GammaDoseEnergySUP}
-    }\\
-    \subfloat[CUP]{
-        \todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}\hspace{\columnwidth}
+    \end{minipage}
+    \begin{minipage}{\columnwidth}
+        %\includegraphics[draft,width=2.5in]{CUPTOF10beamproRADECS.png}
+        \todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}
+        \subcaption{CUP}
         \label{fig:GammaDoseEnergyCUP}
-    }
+    \end{minipage}
     \caption{Gamma dose spectra}
     \label{fig:GammaDoseEnergy}
 \end{figure}
