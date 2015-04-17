@@ -92,51 +92,32 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
-
 \begin{document}
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-\title{Monte Carlo calculation to characterize neutron and gamma fields for ANITA neutron facility at TSL}
 
-\author{Q. Hong,
-S. P. Platt,
-A. V. Prokofiev,
-E. Passoth
-\thanks{further information}\\[2mm] 	% Your name
-%\normalsize University of Central Lancashire \\ 							% Your institution
-%\normalsize \href{qhong@uclan.ac.uk} 								% Your email address
-\vspace{-5mm}
+\title{
+    Monte Carlo calculation to characterize neutron and gamma fields for ANITA neutron facility at TSL
 }
 
-
-%----------------------------------------------------------------------------------------
+\author{%
+    Q. Hong,
+    S. P. Platt,
+    A. V. Prokofiev,
+    E. Passoth
+    \thanks{%
+        Qian Hong and Simon Platt are with the University of Central Lancashire, England. Alexander Prokofiev and Elke Passoth are with the The Svedberg Laboratory, University of Uppsala, Sweden.
+    }
+}
 
 \maketitle % Insert title
 \todo{Check title, affiliations etc.}
-%----------------------------------------------------------------------------------------
-%	ABSTRACT
-%----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to analyze radiation fields at the Close User Position (CUP) and Standard User Position(SUP) for single-event effect testing. ...\todo{Revise abstract}
+    Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to analyze radiation fields at the Close User Position (CUP) and Standard User Position(SUP) for single-event effect testing. ...\todo{Revise abstract}
 \end{abstract}
-
-%----------------------------------------------------------------------------------------
-%	KEYWORDS
-%----------------------------------------------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	ARTICLE CONTENTS
-%----------------------------------------------------------------------------------------
-
-\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 \todo{Review introduction}
 \IEEEPARstart{M}{onte} Carlo simulations of naked spallation neutron sources at Los Alamos Neutron Science Center (LANSCE) Weapons Neutron Research (WNR) Target 4\cite{Wender87} and the ANITA beam at the University of Uppsala The Svedberg Laboratory (TSL) have been completed using Geant4 and proved that Binary intranuclear cascade (INC) model gave a good representation of neutron spectra than Bertini INC model did\cite{Platt13}. Simulation result of neutron spectra using Geant4 with Binary INC model is below measurement data from ANITA neutron facility. It is likely to be influenced by our omission of collimator, shielding, and bending magnet component. This work is to verify this hypothesis is correct. In addition, we are intested in the gamma field at CUP and SUP in spallation neutron source at the ANITA neutron facility at TSL for SEE testing.
-%------------------------------------------------
 
 \section{Modelling}
 
@@ -184,15 +165,13 @@ The predicted neutron fluence rate above \SI{10}{\MeV} at a proton current of \S
 The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Quantify integral yield}
 
 \begin{figure}[t]
-    \vspace{2in}
     \includegraphics[width=3in]{SUP10ColSpatialDistribution10MeVRADECS.png}
 % \todo{Show density of neutrons above \SI{10}{\MeV} at SUP}
-    \caption{Neutron fluence rate above \SI{10}{\MeV} at the Standard User Position.}
+    \caption{Spatial distribution of neutrons above \SI{10}{\MeV} at the Standard User Position.}
     \label{fig:SUPDensity}
 \end{figure}
 
 \begin{figure}[t]
-    \vspace{2in}
     \includegraphics[width=3in]{SUP10beamproFoldingRADECS.png}
 % \todo{Show SUP profile, compared to measurements}
     \caption{Neutron profile at the Standard User Position}
@@ -203,12 +182,8 @@ Fig.~\ref{fig:SUPSpectraComparison} compares calculated neutron yield versus ene
 The results show\ldots\todo{Discuss the results. Compare current with earlier calculations. Compare calculations with parameterisation.}
 
 \begin{figure}[t]
-    \vspace{2in}
-%	\subfloat[Integral fluence rate]{\todo{Integral spectra on log-log axes}\hspace{\columnwidth}}\\
-	\subfloat[Integral fluence rate]{\includegraphics[width=3in]{ANITAIntYieldRADECS.eps}\hspace{\columnwidth}}\\
-    \vspace{2in}
-%	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\todo{Normalised spectra on lethargy axes}\hspace{\columnwidth}}
-	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\includegraphics[width=3in]{ANITALetYieldnormalisedRADECS.eps}\hspace{\columnwidth}}
+	\subfloat[Integral fluence rate]{\includegraphics[width=3in]{ANITAIntYieldRADECS.eps}}\\
+	\subfloat[Equilethargic spectrum, normalised to fluence above \SI{10}{\MeV}]{\includegraphics[width=3in]{ANITALetYieldnormalisedRADECS.eps}}
 	\caption{Neuton spectrum at the SUP, showing comparison between the standard facility parameterisation~\cite{Prokofiev2009} and results from a naked Geant4 model~\cite{Platt13} and this work.}
 	\label{fig:SUPSpectraComparison}
 \end{figure}
@@ -217,15 +192,13 @@ Fig.~\ref{fig:CUPDensity} and Fig.~\ref{fig:CUPProfile} show neutron spatial dis
 The results show\ldots\todo{Describe the results: contours and profile at CUP}
 
 \begin{figure}[t]
-    \vspace{2in}
     \includegraphics[width=3in]{CUP10ColSpatialDistribution10MeV.png}
 % \todo{Show density of neutrons above \SI{10}{\MeV} at CUP}
-    \caption{Neutron fluence rate above \SI{10}{\MeV} at the Close User Position.}
+    \caption{Spatial distribution of neutrons above \SI{10}{\MeV} at the Close User Position.}
     \label{fig:CUPDensity}
 \end{figure}
 
 \begin{figure}[t]
-    \vspace{2in}
     \includegraphics[width=3in]{CUPTOF10beamproRADECS.png}
 % \todo{Show CUP profile, compared to measurements}
     \caption{Neutron profile at the Close User Position}
@@ -303,7 +276,7 @@ Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distributio
 Fig.~\ref{fig:DifferentialGammaSpectra} shows the calculated differential gamma spectra within the central region of the spatial distribution.
 The results show\ldots\todo{Describe the gamma results}
 
-\begin{figure}
+\begin{figure}[t]
     \centering
     \vspace{2in}
     \subfloat[SUP]{
@@ -321,10 +294,8 @@ The results show\ldots\todo{Describe the gamma results}
     \label{fig:GammaSpatialDistribution}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t]
     \centering
-    \vspace{2in}
-    \hspace{\columnwidth}
     \includegraphics[width=3in]{gDYieldcomparedRADECS.eps}
     \caption{Calculated differential gamma spectra at CUP and SUP}
     \label{fig:DifferentialGammaSpectra}
@@ -334,7 +305,7 @@ Fig.~\ref{fig:GammaDoseEnergy} shows the calculated distribution of gamma dose, 
 The results show\ldots\todo{Describe the gamma dose versus energy graphs.}
 The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\milli\gray\per\hour} at SUP and \SI{370}{\milli\gray\per\hour} at CUP.\todo{Discuss calculated dose rates}
 
-\begin{figure}
+\begin{figure}[t]
     \centering
     \vspace{2in}
     \subfloat[SUP]{
@@ -349,13 +320,8 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
     \label{fig:GammaDoseEnergy}
 \end{figure}
 
-
 \section{Discussion}
 \todo{Discussion}
-
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
 
 \todo{Complete citations}
 
@@ -383,7 +349,7 @@ Prokofiev, A.V. and Passoth, E. and Hjalmarsson, A. and Majerle, M.,
 
 \end{thebibliography}
 
-%----------------------------------------------------------------------------------------
+\cleardoublepage
 
 \todos
 
