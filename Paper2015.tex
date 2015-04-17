@@ -1,5 +1,5 @@
 % Paper 2015
-\documentclass[11pt,a4paper]{IEEEtran}
+\documentclass[peerreviewca,11pt,a4paper]{IEEEtran}
 
 \usepackage{ifpdf}
 \usepackage{cite}
@@ -56,13 +56,20 @@
     Detailed Geant4 simulations of the ANITA and ANITA-CUP neutron facilities
 }
 
-\author{%
-    Q. Hong,
-    S. P. Platt,
-    A. V. Prokofiev,
-    E. Passoth
-    \thanks{%
-        Qian Hong and Simon Platt are with the University of Central Lancashire, England. Alexander Prokofiev and Elke Passoth are with the The Svedberg Laboratory, University of Uppsala, Sweden.
+\author{
+    \IEEEauthorblockN{
+        Q. Hong\IEEEauthorrefmark{1},
+        S. P. Platt\IEEEauthorrefmark{1},
+        A. V. Prokofiev\IEEEauthorrefmark{2} and
+        E. Passoth\IEEEauthorrefmark{2}
+    }
+    \IEEEauthorblockA{
+        \IEEEauthorrefmark{1}
+        University of Central Lancashire
+    }
+    \IEEEauthorblockA{
+        \IEEEauthorrefmark{2}
+        The Svedberg Laboratory, University of Uppsala
     }
 }
 
@@ -72,6 +79,8 @@
     Monte Carlo simulation of spallation neutron source of ANITA at TSL was used to analyze radiation fields at the Close User Position (CUP) and Standard User Position(SUP) for single-event effect testing. ...
     \todo{Revise abstract}
 \end{abstract}
+
+\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 
