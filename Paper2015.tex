@@ -5,22 +5,13 @@
 \usepackage{cite}
 
 \ifCLASSINFOpdf
-   \usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-   \graphicspath{{../pdf/}{../jpeg/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+    \usepackage[pdftex]{graphicx}
+    \graphicspath{{../pdf/}{../jpeg/}}
+    \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-   \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-   \DeclareGraphicsExtensions{.eps}
+    \usepackage[dvips]{graphicx}
+    \graphicspath{{../eps/}}
+    \DeclareGraphicsExtensions{.eps}
 \fi
 
 \usepackage[cmex10]{amsmath}
@@ -243,25 +234,16 @@ At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below
 Neutron beam monitoring and characterisation at TSL uses time-of flight measurements with \U238\ TFBCs.
 Our Geant4 model permits these measurements to be simulated.
 Neutron time of flight data from the simulation (time measured from the time of arrival of primary photons at the target to the time of arrival of secondary neutrons at the point of interest) were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
-Results are for SUP and CUP-TOF positions and compared with measurements~\cite{Prokofiev2009,Prokofiev14} in Fig.~\ref{fig:TOFSpectra}.
+Results are presented here for the CUP-TOF position and compared with measurements~\cite{Prokofiev14} in Fig.~\ref{fig:TOFSpectra}.
 The simulated CUP-TOF results were calculated for the \SI{3}{\cm} collimator, to match the available measured data.
 The results show\ldots
 \todo{Explain what the results show.}
 
 \begin{figure}[t]
-    \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{CUPTOFtofspectraRADECS.png}
-        \subcaption{At the CUP-TOF position, with \SI{3}{\cm} collimator}
-    	\label{fig:TOFFrameOverlapspectrum}
-        \todo{Add experimental data to TOF figure (CUP)}
-    \end{minipage}
-    \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{SUPtofspectraRADECS.png}
-        \subcaption{At the SUP, with \SI{10.2}{\cm} collimator}
-        \label{fig:SUP10FrameOverlapspectrum}
-        \todo{Add experimental data to TOF figure (SUP)}
-    \end{minipage}
-    \caption{Simulated neutron time of flight spectra compared to measurements}
+    \includegraphics[width=\columnwidth]{CUPTOFtofspectraRADECS.png}
+    \caption{
+        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} collimator
+        }
     \label{fig:TOFSpectra}
 \end{figure}
 
@@ -360,7 +342,7 @@ Prokofiev, A.V. and Passoth, E. and Hjalmarsson, A. and Majerle, M.,
 \newblock {\em in Proc. IEEE Trans. Nucl. Sci. 2014}, pp 1929-1936 							% vol:page, 2011
 
 \bibitem{ANITAdrawing}
-Prokofiev, A.V. 
+Prokofiev, A.V.
 \newblock personal communication
 \newblock {\em TSL, Sep. 2013}
 
