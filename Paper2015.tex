@@ -74,13 +74,21 @@
 \end{abstract}
 
 \section{Introduction}
-\todo{Review introduction}
-\IEEEPARstart{M}{onte} Carlo simulations of naked spallation neutron sources at Los Alamos Neutron Science Center (LANSCE) Weapons Neutron Research (WNR) Target 4\cite{Wender87} and the ANITA beam at the University of Uppsala The Svedberg Laboratory (TSL) have been completed using Geant4 and proved that Binary intranuclear cascade (INC) model gave a good representation of neutron spectra than Bertini INC model did\cite{Platt2013}. Simulation result of neutron spectra using Geant4 with Binary INC model is below measurement data from ANITA neutron facility. It is likely to be influenced by our omission of collimator, shielding, and bending magnet component. This work is to verify this hypothesis is correct. In addition, we are intested in the gamma field at CUP and SUP in spallation neutron source at the ANITA neutron facility at TSL for SEE testing.
+
+The ANITA facility at The Svedberg Laboratory has been widely used for accelerated testing for neutron single-event effects (SEE)~\cite{Prokofiev2009}.
+A high-flux facility, ANITA-CUP, has recently been introduced and reported by Prokofiev et al.~\cite{Prokofiev2014}.
+
+Platt et al. have reported preliminary Monte Carlo models of neutron and gamma production at ANITA~\cite{Platt2013}.
+That work was motivated by a desire to understand the possibility of gamma sensitivity in detectors used for beam monitoring during SEE tests.
+Simulations of a bare spallation target showed demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility.
+The current work was motivation partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations model would lead to increased quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP.
+
+Accordingly, in this paper we will present a comprehensive set of analyses of neutron and gamma fields at ANITA and ANITA-CUP, with comparison against independent models and validation against measurements.
+We present a subset of those results in this extended abstract.
 
 \section{Modelling}
-Simulations were conducted using Geant4 version 10.0 and the binary intranuclear cascade model, as recommended in~\cite{Platt2013}.
-A detailed model of the ANITA geometry was implemented in Geant4, as illustrated in Fig.~\ref{fig:ANITAoverview}
-Description of the geometry is given in \cite{Prokofiev2009,Prokofiev2014}.
+Simulations were conducted using Geant4 version 10.0~\cite{Agostinelli2003,Allison2006} with the binary intranuclear cascade model~\cite{Platt2013}.
+A detailed model of the ANITA geometry~\cite{Prokofiev2009,Prokofiev2014} was implemented in Geant4, as illustrated in Fig.~\ref{fig:ANITAoverview}.
 %; a summary only is given here.
 %The spallation target is a tungsten cylinder of diameter \SI{5}{\cm} and length \SI{2.4}{\cm}~\cite{ANITAdrawing}.
 %The target is cooled by water and surrounded by a stainless-steel cooling jacket.
@@ -88,12 +96,11 @@ Description of the geometry is given in \cite{Prokofiev2009,Prokofiev2014}.
 %Lead shielding blocks in the target region are also modelled, and shown in red Fig.~\ref{fig:ANITAoverview}.
 %A large electromagnet surrounding the target is modelled and shown in Fig.~\ref{fig:ANITAoverview} in grey (iron) and yellow (copper).
 %An iron collimator with variable apertures is modelled  and shown downstream of the target (grey).
-Except where indicated otherwise, all results in this summary are for the standard collimator size (\SI{10.2}{\cm} diameter).
-In the final paper we will present results for cylindrical collimators in the range from \SIrange{3}{30}{\cm} diameter.
 Simulated protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting neutron and gamma fields were evaluated at several detector locations.
 In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF, \SI{0.84}{m} downstream of the target.
 %N.B. This is downstream of the downstream edge of the target in Qian's model.
+The SUP position is downstream of a collimator with variable aperture; the CUP and CUP-TOF positions are upstream of the same collimator.
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation.
 TFBC data are used to validate simulation results.
 
@@ -107,14 +114,11 @@ TFBC data are used to validate simulation results.
 \end{figure}
 
 \section{Results}
-In previous work Platt et al.~\cite{Platt2013} reported simulations of a naked ANITA target, demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at ANITA SUP~\cite{Prokofiev2009}.
-Part of the motivation for this work was to investigate whether improvements in the fidelity of the geometry used in the Geant4 model would lead to increased quantitative agreement.
-\todo{Review first part of Results section -- move to introduction?}
 
 \subsection{Neutrons}
 Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP, for neutrons above \SI{10}{\MeV}.
-The SUP is downstream of the collimator, whose effect is clearly visible.
-Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from an analytical model reported by Prokofiev et al.~\cite{Prokofiev2009}.
+Collimation is clearly visible.
+Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from an established analytical model~\cite{Prokofiev2009}.
 The analytical model therefore exceeds the present calculations by about 30\%.
 
 \begin{figure}[t]
@@ -197,9 +201,9 @@ The results show\ldots
 	\label{fig:Lethargyplots}
 \end{figure}
 
-Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with fits of  models~\cite{Prokofiev2009,Prokofiev2014}.
-The SUP calculations and analytical models agree very closely below \SI{20}{\MeV}; the analytical model exceeds the calculations somewhat above that energy.
-At CUP the analytical model exceeds the Geant4 calculations by about TBD\% below \SI{20}{\MeV} and slightly more above that energy.
+Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the Prokofiev et al. models~\cite{Prokofiev2009,Prokofiev2014}.
+The SUP calculations and analytical model agree very closely below \SI{20}{\MeV}; the analytical model exceeds the calculations somewhat above that energy.
+At CUP the analytical model exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
 \todo{Improve precision of the summary description of differential spectra.}
 
 \begin{figure}[t]
@@ -232,7 +236,6 @@ The results show\ldots
         Calculated gamma spatial distribution, with
         \SI{10.2}{\cm} diameter collimator
     }
-    \todo{It would be better if gamma spatial distribution were expressed as dose, rather than number of photons. Not in time for the abstract submission, however!}
     \label{fig:GammaSpatialDistribution}
 \end{figure}
 
@@ -246,7 +249,7 @@ The results show\ldots
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
 
-Fig.~\ref{fig:GammaDoseEnergy} shows the calculated distribution of gamma dose, obtained by folding the gamma spectra (Fig~\ref{fig:GammaDoseEnergy}) with dose conversion data from \cite{tbd}.
+Fig.~\ref{fig:GammaDoseEnergy} shows the calculated distribution of gamma dose, obtained by folding the gamma spectra (Fig~\ref{fig:GammaDoseEnergy}) with dose conversion data from \cite{Kwon1980}.
 The results show\ldots
 \todo{Describe the gamma dose versus energy graphs.}
 The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\milli\gray\per\hour} at SUP and \SI{370}{\milli\gray\per\hour} at CUP.
@@ -275,39 +278,41 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
 \section{Discussion}
 \todo{Discussion}
 
-\todo{Complete citations}
-
 \begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
-									
+
 \bibitem{Prokofiev2009}
 Prokofiev, A. V. et al.,
-\newblock CUP-A New High-Flux Irradiation Position at the ANITA Neutron Facility at TSL,		\newblock {\em Proc. IEEE Trans. Nucl. Sci. 2014}, pp 1929-1936
+\newblock ``Characterization of the ANITA neutron source for accelerated SEE testing at The Svedberg Laboratory'',
+\newblock {\em 2009 IEEE Radiat. Effects Data Workshop Record}, pp.~166-173
 
 \bibitem{Prokofiev2014}
 Prokofiev, A. V. et al.,
-\newblock Characterization of the ANITA Neutron Source for Accelerated SEE Testing at the Svedberg Laboratory,
-\newblock {\em in Proc. IEEE Radiat. Effects Data Work. 2009,} pp 166-173
+\newblock ``CUP--A new high-flux irradiation position at the ANITA neutron facility at TSL'',		\newblock {\em IEEE Trans. Nucl. Sci.} vol.~61 no.~4, pp.~1929-1936, 2014
 
 \bibitem{Platt2013}
 Platt, S. P. et al.,
-\newblock Neutron and gamma fields at neutron spallation sources for single-event-effects testing,
-\newblock {\em in Proc. 14th Euro. Conf. Radiat. Effects Compon. Syst. 2013}
+\newblock ``Neutron and gamma fields at neutron spallation sources for single-event-effects testing'',
+\newblock {\em Proc. 14th European Conf. Radiat. Effects Compon. Syst.}, 2013
 
-\bibitem{Truscott2006}
-Truscott, P. et al.,
-\newblock Neutron Energy-Deposition Spectra Measurements, and Comparisons with Geant4 Predictions
-\newblock{\em Proc. IEEE Trans. Nucl. Sci. 2006} pp. 1883-1889
+\bibitem{Agostinelli2003}
+Agostinelli, S. et al.,
+\newblock``Geant4--a simulation toolkit'',
+\newblock {\em Nucl. Unst. Meth. Phys. Res. A} vol.~506, pp.~250--303, 2003
+
+\bibitem{Allison2006}
+Allison, J. et al.,
+\newblock ``Geant4 developments and applications'',
+\newblock {\em IEEE Trans. Nucl. Sci.} vol.~53 no.~1, pp.~270--278, 2006
 
 \bibitem{Carlson2009}
 Carlson, A. D. et al.,
-\newblock International Evaluation of Neutron Cross Section Standards
-\newblock{\em Proc. Nucl. Data Sheets 2009} pp. 3215-3324
+\newblock ``International evaluation of neutron cross section standards'',
+\newblock{\em Nucl. Data Sheets} vol.~110 no.~12, pp.~3215-3324, 2009
 
 \bibitem{Kwon1980}
 Kwon, S.-G. et al.,
-\newblock Calculation of Neutron and Gamma-Ray Flux-to-Dose-Rate Conversion Factors
-\newblock{\em Proc. J. Kor. Nucl. Soc. 1980}, pp. 171-179
-
+\newblock ``Calculation of neutron and gamma-ray flux-to-dose-rate conversion factors'',
+\newblock{\em J. Kor. Nucl. Soc.} vol.~12 no.~3, pp.~171-179, 1980
 
 \end{thebibliography}
 
