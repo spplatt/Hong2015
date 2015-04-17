@@ -93,7 +93,7 @@ Simulations were conducted using Geant4 version 10.0 and the binary intranuclear
 A detailed model of the ANITA geometry was implemented in Geant4, as illustrated in Fig.~\ref{fig:ANITAoverview}
 Description of the geometry is given in \cite{Prokofiev2009,Prokofiev14}.
 %; a summary only is given here.
-%The spallation target is a tungsten cylinder of diameter \SI{5}{\cm} and length \SI{2.4}{\cm}.
+%The spallation target is a tungsten cylinder of diameter \SI{5}{\cm} and length \SI{2.4}{\cm}~\cite{ANITAdrawing}.
 %The target is cooled by water and surrounded by a stainless-steel cooling jacket.
 %The target assembly with its cooling jacket appears as a small blue rectangle in Fig.~\ref{fig:ANITAoverview}.
 %Lead shielding blocks in the target region are also modelled, and shown in red Fig.~\ref{fig:ANITAoverview}.
@@ -103,7 +103,7 @@ Except where indicated otherwise, all results in this summary are for the standa
 In the final paper we will present results for cylindrical collimators in the range from \SIrange{3}{30}{\cm} diameter.
 Simulated protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting gamma and neutron fields were evaluated at several detector locations.
-In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre\todo{check centre}~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF, \SI{0.84}{m} downstream of the target.
+In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target centre\todo{check centre, it said that 250cm downstream of the production target in the paper}~\cite{Prokofiev2009}, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF, \SI{0.84}{m} downstream of the target.
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation using time-of-flight (TOF) techniques.
 Model validation will be demonstrated against CUP-TOF data (section~\ref{tbd}).
 
@@ -125,8 +125,8 @@ Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP, for neu
 The collimation effect is clearly visible.
 Fig.~\ref{fig:SUPProfile} shows neutron fluence profile at the SUP.
 In Fig.~\ref{fig:SUPProfile} simulated data were folded in energy with the neutron fission cross section for \U238~\cite{tbd}, replicating measurement with a \U238\ TFBC~\cite{Prokofiev2009}.
-Within the beam umbra the predicted neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{0}{\neutron\per\cm\squared\per\second}, compared to \SI{0}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt13} and \SI{0}{\neutron\per\cm\squared\per\second} from the parameterisation~\cite{Prokofiev2009}.
-The parameterisation therefore exceeds the current calculations by tbd\%.\todo{Quantify integral yield}
+Within the beam umbra the predicted neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt13} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from the parameterisation~\cite{Prokofiev2009}.
+The parameterisation therefore exceeds the current calculations by tbd 31\%.\todo{Quantify integral yield}
 
 \begin{figure}[t]
     \includegraphics[width=2.5in]{SUP10ColSpatialDistribution10MeVRADECS.png}
@@ -348,6 +348,11 @@ Prokofiev, A.V. and Blomgren, J. and Majerle, M. and Nolte, R. and Rottger, S. a
 Prokofiev, A.V. and Passoth, E. and Hjalmarsson, A. and Majerle, M.,
 \newblock CUP-A New High-Flux Irradiation Position at the ANITA Neutron Facility at TSL,		% title	
 \newblock {\em in Proc. IEEE Trans. Nucl. Sci. 2014}, pp 1929-1936 							% vol:page, 2011
+
+\bibitem{ANITAdrawing}
+Prokofiev, A.V. 
+\newblock personal communication
+\newblock {\em TSL, Sep. 2013}
 
 \end{thebibliography}
 
