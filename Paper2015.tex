@@ -145,17 +145,36 @@ The parameterisation therefore exceeds the present calculations about TBD\%.
 The results show\ldots
 \todo{Describe the results: contours and profile at CUP and SUP}
 
-Fig.~\ref{fig:CUPProfile} shows neutron fluence profile at the CUP, compared with measurements.
-In Fig.~\ref{fig:CUPProfile} simulated data were folded in energy with the neutron fission cross section for \U238~\cite{tbd}, replicating the measurements which were made with a \U238\ TFBC~\cite{Prokofiev2009}.
+Neutron beam monitoring and characterisation at TSL includes measurements with \U238\ TFBCs~\cite{Prokofiev14}.
+Fig.~\ref{fig:CUPProfile} shows neutron fluence profile at the CUP, compared with measurements~\cite{Prokofiev14}.
+In Fig.~\ref{fig:CUPProfile} simulated data were folded in energy with the neutron fission cross section for \U238~\cite{tbd}.
 The results show\ldots
 \todo{Describe the results: contours and profile at CUP}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=\columnwidth]{CUPTOF10beamproRADECS.png}
-    \caption{Neutron profile at the CUP, normalised to fluence rate on axis.}
+    \caption{
+        Neutron profile at the CUP, normalised to fluence rate on axis.
+        \SI{10.2}{\cm} collimator}
     \label{fig:CUPProfile}
 \end{figure}
+
+Fig.~\ref{fig:TOFSpectra} compares simulated and measured TOF spectra at the CUP-TOF position.
+Neutron time of flight data from the simulation were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
+The results show\ldots
+\todo{Explain what the results show.}
+
+\begin{figure}[t]
+    \includegraphics[width=\columnwidth]{CUPTOFtofspectraRADECS.png}
+    \caption{
+        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} collimator
+        }
+    \label{fig:TOFSpectra}
+\end{figure}
+
+
+
 
 Fig.~\ref{fig:Lethargyplots} compares calculates spectra at SUP and CUP with their respective standard facility models~\cite{Prokofiev2009,Prokofiev14}.
 The SUP data are also compared with results from preliminary Geant4 simulations~\cite{Platt13}.
@@ -175,12 +194,13 @@ The results show\ldots
         \centering
         \includegraphics[width=0.9\columnwidth]{ANITALetYieldnormalisedRADECS.eps}
         \subcaption{
-            CUP. 
+            CUP.
             The comparison is against the standard facility parameterisation~\cite{Prokofiev2009}
         }
     \end{minipage}
 	\caption{
-        Calculated neutron spectra, normalised to fluence above \SI{10}{\MeV}
+        Calculated neutron spectra, normalised to fluence above \SI{10}{\MeV}.
+        \SI{10.2}{\cm} collimator
     }
 	\label{fig:Lethargyplots}
 \end{figure}
@@ -194,26 +214,13 @@ At CUP the parameterisation exceeds the Geant4 calculations by about TBD\% below
     \centering
     \includegraphics[width=0.9\columnwidth]{DiffYieldComparedSUPCUP10.eps}
     \caption{
-        Differential neutron spectra at CUP and SUP, comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}
+        Differential neutron spectra at CUP and SUP (\SI{10.2}{\cm} collimator), comparing results of this work to facility parameterisations~\cite{Prokofiev2009,Prokofiev14}
     }
     \label{fig:DifferentialSpectra}
 \end{figure}
 
 
-Neutron beam monitoring and characterisation at TSL includes time-of flight measurements with \U238\ TFBCs~\cite{Prokofiev14}.
-Fig.~\ref{fig:TOFSpectra} compares simulated and measured TOF spectra at the CUP-TOF position.
-The simulated CUP-TOF results were calculated for the \SI{3}{\cm} collimator, to match the measured data.
-Neutron time of flight data from the simulation were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
-The results show\ldots
-\todo{Explain what the results show.}
 
-\begin{figure}[t]
-    \includegraphics[width=\columnwidth]{CUPTOFtofspectraRADECS.png}
-    \caption{
-        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} collimator
-        }
-    \label{fig:TOFSpectra}
-\end{figure}
 
 \subsection{Photons}
 Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP.
@@ -224,15 +231,18 @@ The results show\ldots
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
         \includegraphics[width=\columnwidth]{SUP10ColSpatialDistributionAllG.png}
-        \subcaption{SUP}
+        \subcaption{Standard User Position}
         \label{fig:GammaSpatialDistributionSUP}
     \end{minipage}
     \begin{minipage}{\columnwidth}
         \includegraphics[width=\columnwidth]{CUP10ColSpatialDistributionAllG.png}
-        \subcaption{CUP}
+        \subcaption{Close User Position}
         \label{fig:GammaSpatialDistributionCUP}
     \end{minipage}
-    \caption{Gamma spatial distribution}
+    \caption{
+        Calculated gamma spatial distribution.
+        \SI{10.2}{\cm}collimator
+    }
     \todo{It would be better if gamma spatial distribution were expressed as dose, rather than number of photons. Not in time for the abstract submission, however!}
     \label{fig:GammaSpatialDistribution}
 \end{figure}
@@ -240,7 +250,10 @@ The results show\ldots
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.9\columnwidth]{gDYieldcomparedRADECS.eps}
-    \caption{Calculated differential gamma spectra at CUP and SUP}
+    \caption{
+        Calculated gamma spectra at CUP and SUP.
+        \SI{10.2}{\cm} collimator
+    }
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
 
@@ -254,18 +267,19 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
     \begin{minipage}{\columnwidth}
         \centering
         \includegraphics[width=0.9\columnwidth]{DoseVSenergySUP.eps}
-        \subcaption{SUP}
+        \subcaption{Standard User Position}
         \label{fig:GammaDoseEnergySUP}
-        \todo{Add gamma dose versus energy at SUP, \SI{10.2}{\cm} collimator}
     \end{minipage}
     \begin{minipage}{\columnwidth}
         \centering
         \includegraphics[width=0.9\columnwidth]{DoseVSenergyCUP.eps}
-        \subcaption{CUP}
+        \subcaption{Close User Position}
         \label{fig:GammaDoseEnergyCUP}
-        \todo{Add gamma dose versus energy at CUP, \SI{10.2}{\cm} collimator}
     \end{minipage}
-    \caption{Gamma dose spectra}
+    \caption{
+        Calculated gamma dose spectra.
+        \SI{10.2}{\cm} collimator
+    }
     \label{fig:GammaDoseEnergy}
 \end{figure}
 
