@@ -207,7 +207,6 @@ The present simulations confirm the Prokofiev et al. semi-empirical multicompone
     }
 \end{figure}
 
-
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
         \centering
@@ -217,6 +216,9 @@ The present simulations confirm the Prokofiev et al. semi-empirical multicompone
             The comparison is against the fit of Prokofiev et al.~\cite{Prokofiev2009} and preliminary Geant4 modelling by Platt et al.~\cite{Platt2013}
         }
         \label{fig:LethargyplotSUP}
+        \todo{
+            Fig.~\ref{fig:LethargyplotSUP}: update legend. Make dotted curve dash-dotted.
+        }
     \end{minipage}
     \begin{minipage}{\columnwidth}
         \centering
@@ -243,19 +245,20 @@ The present simulations confirm the Prokofiev et al. semi-empirical multicompone
     \label{fig:DifferentialSpectra}
 \end{figure}
 
-Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with their respective analytical models.
+Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with analytical fits based on MCNPX simulations~\cite{Prokofiev2009,Prokofiev2014}.
 The SUP data are also compared with results from preliminary Geant4 simulations~\cite{Platt2013}.
-These curves are normalised to neutron fluence above \SI{10}{\MeV} an presented as lethargy plots to emphasis the shape of the spectra rather than their integral fluence rate.
-The increased integral fluence rate at SUP from the present calculations, compared to the preliminary results of \cite{Platt2013} is therefore not visible in Fig.~\ref{fig:LethargyplotSUP}.
-Fig.~\ref{fig:LethargyplotSUP} does show an increased contribution below about \SI{1}{\MeV}, consistent with interactions in materials other than the target, which were absent from the preliminary simulations.
-Fig.~\ref{fig:LethargyplotCUP} shows extremely close agreement with the analytical model from~\cite{Prokofiev2014} (the analytical model smooths out the structure in the evaporation peak around \SI{1}{\MeV}).
-When compared to the analytical models the calculated spectra from the current work lead to slightly lower neutron yield and slightly higher peak energies in the higher energy peak near \SI{100}{\MeV}.
+These curves are normalised to neutron fluence above \SI{10}{\MeV} and presented as lethargy plots to emphasis the shape of the spectra rather than their integral fluence rate.
+%The increased integral fluence rate at SUP from the present calculations, compared to the preliminary results of \cite{Platt2013}, is therefore not visible in Fig.~\ref{fig:LethargyplotSUP}.
+Fig.~\ref{fig:LethargyplotSUP} shows an increased contribution below about \SI{1}{\MeV}, consistent with interactions in materials other than the target, absent from the preliminary simulations.
+Fig.~\ref{fig:LethargyplotCUP} shows extremely close agreement with the analytical model from~\cite{Prokofiev2014} (the analytical model does not reproduce the structure in the evaporation peak around \SI{1}{\MeV}).
+When compared to the fits the calculated spectra from the current work lead to slightly lower neutron yield and slightly higher peak energies in the higher energy peak near \SI{100}{\MeV}.
+This is consistent with the TOF spectra (see Fig.~\ref{fig:TOFSpectra} and associated discussion.)
 It is not surprising that this is not affected by the improved model geometry as this peak arises from intranuclear cascades in the target.
 We continue to investigate this discrepancy and will discuss it further in our final paper.
 
-Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the Prokofiev et al. models~\cite{Prokofiev2009,Prokofiev2014}.
-The SUP calculations and analytical model agree very closely below \SI{20}{\MeV}; the analytical model exceeds the calculations somewhat above that energy.
-At CUP the analytical model exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
+Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the analytical fits~\cite{Prokofiev2009,Prokofiev2014}.
+The SUP calculations and analytical fit agree very closely below \SI{20}{\MeV}; the analytical fit exceeds the calculations somewhat above that energy.
+At CUP the analytical fit exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
 
 \subsection{Photons}
 Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP, and shows a gamma radiation distribution that is qualitatively very similar to that for neutrons at both locations.
