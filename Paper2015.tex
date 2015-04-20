@@ -42,8 +42,8 @@
 \usepackage{subcaption}
 
 \usepackage{todo}
-%\renewcommand\todo[1]{\relax}
-%\renewcommand\todos{\relax}
+\renewcommand\todo[1]{\relax}
+\renewcommand\todos{\relax}
 
 \usepackage{bpchem}
 \def\U238{\BPChem{\^{238}U}}
@@ -165,7 +165,6 @@ The present calculations therefore underestimate measurements at the SUP by 30\%
         Dashed lines indicate expected quasi-collimation by the target surroundings.
     }
     \label{fig:CUPProfile}
-    \todo{Fig.~\ref{fig:CUPProfile}: add axis labels.}
 \end{figure}
 
 Fig.~\ref{fig:CUPDensity} shows the spatial distribution of neutrons above \SI{10}{\MeV} at the CUP.
@@ -191,7 +190,6 @@ This might indicate a relative overestimate of lower energy neutrons in the calc
         Time of flight spectra for \U238 fission events at the CUP-TOF position, with \SI{3}{\cm} diameter collimator.
         }
     \label{fig:TOFSpectra}
-    \todo{Fig.~\ref{fig:TOFSpectra}: correct axis labels.}
 \end{figure}
 
 \begin{figure}[t]
@@ -218,7 +216,7 @@ This might indicate a relative overestimate of lower energy neutrons in the calc
 	\label{fig:Lethargyplots}
 \end{figure}
 
-Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with analytical fits based on MCNPX simulations~\cite{Prokofiev2009,Prokofiev2014}.
+Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with analytical fits based on MCNPX simulations and TOF measurements~\cite{Prokofiev2009,Prokofiev2014}.
 The SUP data are also compared with results from Geant4 simulations of the bare target~\cite{Platt2013}.
 These curves are normalised to neutron fluence above \SI{10}{\MeV} and presented as lethargy plots to emphasis the shape of the spectra rather than their integral fluence rate.
 %The increased integral fluence rate at SUP from the present calculations, compared to the preliminary results of \cite{Platt2013}, is therefore not visible in Fig.~\ref{fig:LethargyplotSUP}.
@@ -226,7 +224,7 @@ The present results show an increased contribution below about \SI{1}{\MeV}, con
 Fig.~\ref{fig:LethargyplotCUP} shows extremely close agreement between the present results and the analytical fit from~\cite{Prokofiev2014} (which cannot reproduce the structure in the evaporation peak around \SI{1}{\MeV}).
 
 When compared to the fits the calculated spectra from the current work lead to slightly lower neutron yield and slightly higher peak energies in the higher energy peak near \SI{100}{\MeV}.
-This is consistent with results for TOF spectra (see Fig.~\ref{fig:TOFSpectra} and associated discussion.)
+This is consistent with results for the simulated TOF spectra (see Fig.~\ref{fig:TOFSpectra} and associated discussion.)
 It is not surprising that this is unaffected by the improved model geometry as this peak arises from nucleon cascades in the target.
 We continue to investigate this discrepancy and will discuss it further in our final paper.
 
@@ -241,9 +239,8 @@ We continue to investigate this discrepancy and will discuss it further in our f
 \end{figure}
 
 Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the analytical fits.
-The SUP calculations and fit agree very closely below \SI{20}{\MeV}; the fit exceeds the calculations somewhat above that energy.
-At CUP the fit exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
-\todo{Check differential flux comparison one the curves have been renormalised to the same current.}
+The SUP calculations and fit agree very closely in the range from \SIrange{1}{20}{\MeV}; the fit exceeds the calculations somewhat above that energy.
+At CUP the fit exceeds the Geant4 calculations somewhat at all energies, slightly more so above \SI{20}{\MeV}.
 
 \subsection{Photons}
 Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP, and shows a gamma radiation distribution that is qualitatively very similar to that for neutrons at both locations.
@@ -283,7 +280,6 @@ The CUP spectrum also shows a backscatter peak around \SI{0.2}{\MeV}.
     \caption{
         Calculated gamma dose spectra }
     \label{fig:GammaDoseEnergy}
-    \todo{Fig.~\ref{fig:GammaDoseEnergy}: correct y axis units.}
 \end{figure}
 
 Fig.~\ref{fig:GammaDoseEnergy} shows the calculated gamma dose spectrum, obtained by folding the gamma spectra (Fig~\ref{fig:GammaDoseEnergy}) with dose conversion data from \cite{Kwon1980}.
