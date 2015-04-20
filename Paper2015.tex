@@ -62,14 +62,18 @@
         Q. Hong\IEEEauthorrefmark{1},
         S. P. Platt\IEEEauthorrefmark{1},
         A. V. Prokofiev\IEEEauthorrefmark{2} and
-        E. Passoth\IEEEauthorrefmark{2}
+        E. Passoth\IEEEauthorrefmark{3}
     }
     \IEEEauthorblockA{
         \IEEEauthorrefmark{1}
-        University of Central Lancashire
+        University of Central Lancashire, England
     }
     \IEEEauthorblockA{
         \IEEEauthorrefmark{2}
+        Division of Applied Nuclear Physics and The Svedberg Laboratory, University of Uppsala, Sweden
+    }
+    \IEEEauthorblockA{
+        \IEEEauthorrefmark{3}
         The Svedberg Laboratory, University of Uppsala
     }
 }
@@ -85,15 +89,15 @@
 
 \section{Introduction}
 
-The ANITA facility at The Svedberg Laboratory has been widely used for accelerated testing for neutron single-event effects (SEE)~\cite{Prokofiev2009}.
-A high-flux facility, ANITA-CUP, has recently been introduced and reported by Prokofiev et al.~\cite{Prokofiev2014}.
+The ANITA facility~\cite{Prokofiev2009} at The Svedberg Laboratory (TSL) in Uppsala, Sweden, has been widely used for studies and accelerated testing for neutron single-event effects (SEE).
+A high-flux upgrade of the facility, ANITA-CUP, has recently been introduced and reported by Prokofiev et al.~\cite{Prokofiev2014}.
 
-Platt et al. have reported preliminary Monte Carlo models of neutron and gamma production at ANITA~\cite{Platt2013}.
-That work was motivated by a desire to understand the possibility of gamma sensitivity in detectors used for beam monitoring during SEE tests.
+Platt et al. have reported preliminary Monte Carlo simulations of neutron and gamma production at the standard ANITA facility~\cite{Platt2013}.
+That work was motivated by a need to understand possible sensitivity to gamma rays in detectors used for beam monitoring during SEE tests.
 Simulations of a bare spallation target showed qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility~\cite{Prokofiev2009}.
-The present work was motivated partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations would lead to closer quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP~\cite{Prokofiev2014}.
+The present work was motivated partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations would lead to closer quantitative agreement with independent data, and partly by a need to extend the work to encompass the new ANITA-CUP facility~\cite{Prokofiev2014}.
 
-Accordingly, in this paper we will present a comprehensive set of analyses of neutron and gamma fields at ANITA and ANITA-CUP, with comparison against independent models and validation against measurements.
+Accordingly, in this paper we present a comprehensive set of analyses of neutron and gamma fields at ANITA and ANITA-CUP, with comparison to independent models and validation against measurements.
 We present a subset of those results in this extended abstract.
 
 \section{Modelling}
@@ -110,7 +114,7 @@ Simulated protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting neutron and gamma fields were evaluated at several detector locations.
 In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF position, \SI{0.84}{m} downstream of the target.
 %N.B. This is downstream of the downstream edge of the target in Qian's model.
-The SUP position is downstream of a collimator with variable aperture; the CUP and CUP-TOF positions are upstream of the same collimator.
+The SUP position is downstream of a frontal wall with a collimator with variable aperture; the CUP and CUP-TOF positions are upstream of the same collimator.
 The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation including neutron time of flight (TOF) measurements.
 TFBC data are used to validate simulation results.
 
@@ -118,7 +122,7 @@ TFBC data are used to validate simulation results.
 	\centering
 	\includegraphics[width=\columnwidth]{overview.png}
 	\caption{
-        Simulated ANITA facility overview seen from above (yellow: bending magnet; red: shielding components; blue: target assembly; grey: collimator; blue: detector system)
+        Simulated ANITA facility overview seen from above (yellow: bending magnet; red: shielding components; blue: neutron production target assembly; grey: collimator; blue: virtual detector system)
     }
 	\label{fig:ANITAoverview}
 \end{figure}
@@ -128,7 +132,7 @@ TFBC data are used to validate simulation results.
 \subsection{Neutrons}
 Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP, for neutrons above \SI{10}{\MeV}.
 Collimation is clearly visible.
-Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from well-established analytical model~\cite{Prokofiev2009}.
+Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from an analytical model derived from measurements~\cite{Prokofiev2009}.
 The analytical model therefore exceeds the present calculations by about 30\%.
 
 \begin{figure}[t]
