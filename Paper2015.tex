@@ -31,6 +31,7 @@
 \DeclareSIUnit\photon{\ensuremath{\gamma}}
 \DeclareSIUnit\proton{p}
 \DeclareSIUnit\neutron{n}
+\DeclareSIUnit{\seivert}{Sv}
 
 \usepackage{booktabs}
 
@@ -89,8 +90,8 @@ A high-flux facility, ANITA-CUP, has recently been introduced and reported by Pr
 
 Platt et al. have reported preliminary Monte Carlo models of neutron and gamma production at ANITA~\cite{Platt2013}.
 That work was motivated by a desire to understand the possibility of gamma sensitivity in detectors used for beam monitoring during SEE tests.
-Simulations of a bare spallation target showed qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility.
-The present work was motivated partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations would lead to closer quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP.
+Simulations of a bare spallation target showed qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility~\cite{Prokofiev2009}.
+The present work was motivated partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations would lead to closer quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP~\cite{Prokofiev2014}.
 
 Accordingly, in this paper we will present a comprehensive set of analyses of neutron and gamma fields at ANITA and ANITA-CUP, with comparison against independent models and validation against measurements.
 We present a subset of those results in this extended abstract.
@@ -107,10 +108,10 @@ A detailed model of the ANITA geometry~\cite{Prokofiev2009,Prokofiev2014} was im
 %An iron collimator with variable apertures is modelled  and shown downstream of the target (grey).
 Simulated protons were incident axially at an energy of \SI{180}{\MeV}.
 Resulting neutron and gamma fields were evaluated at several detector locations.
-In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF, \SI{0.84}{m} downstream of the target.
+In this paper results are presented for three of these: the Standard User Position (SUP), \SI{2.5}{\m} downstream of the target, the Close User Position (CUP), \SI{0.75}{\m} downstream of the target, and the CUP-TOF position, \SI{0.84}{m} downstream of the target.
 %N.B. This is downstream of the downstream edge of the target in Qian's model.
 The SUP position is downstream of a collimator with variable aperture; the CUP and CUP-TOF positions are upstream of the same collimator.
-The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation.
+The SUP and CUP positions are of interest as they are positions used for SEE tests; the CUP-TOF position is the location of thin-film breakdown counter (TFBC) detectors used for beam monitoring and characterisation including neutron time of flight (TOF) measurements.
 TFBC data are used to validate simulation results.
 
 \begin{figure}[t]
@@ -127,12 +128,12 @@ TFBC data are used to validate simulation results.
 \subsection{Neutrons}
 Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP, for neutrons above \SI{10}{\MeV}.
 Collimation is clearly visible.
-Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from an established analytical model~\cite{Prokofiev2009}.
+Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from well-established analytical model~\cite{Prokofiev2009}.
 The analytical model therefore exceeds the present calculations by about 30\%.
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{SUP10ColSpatialDistribution10MeVRADECS.png}
+        \includegraphics[width=0.9\columnwidth]{SUP10ColSpatialDistribution10MeVRADECS.png}
         \subcaption{
             Standard User Position.
             Concentric white circles indicate nominal umbra and penumbra limits
@@ -140,7 +141,7 @@ The analytical model therefore exceeds the present calculations by about 30\%.
         \label{fig:SUPDensity}
     \end{minipage}
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{CUP10ColSpatialDistribution10MeV.png}
+        \includegraphics[width=0.9\columnwidth]{CUP10ColSpatialDistribution10MeV.png}
         \subcaption{Close User Position}
         \label{fig:CUPDensity}
     \end{minipage}
@@ -149,59 +150,63 @@ The analytical model therefore exceeds the present calculations by about 30\%.
     }
 \end{figure}
 
-Fig.~\ref{fig:CUPDensity} shows equivalent data for the CUP, which is upstream of the collimator.
-In the central region the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.85e6}{\neutron\per\cm\squared\per\second}, compared to \SI{1.17e7}{\neutron\per\cm\squared\per\second} from an analytical model reported by Prokofiev et al.~\cite{Prokofiev2014}.
-The analytical model therefore exceeds the present calculations about 50\%.
-The results show\ldots
-\todo{Describe the results: contours at CUP and SUP}
-
-Fig.~\ref{fig:CUPProfile} shows neutron fluence profile at the CUP, compared with measurements made with \U238\ TFBCs.
-Results of calculations were folded in energy with the neutron fission cross section for \U238~\cite{Carlson2009}.
-The results show\ldots
-\todo{Describe the results: profile at CUP}
-
-\begin{figure}[t]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=\columnwidth]{CUPTOF10beamproRADECS.png}
+    \includegraphics[width=0.9\columnwidth]{CUPTOF10beamproRADECS.png}
     \caption{
-        Neutron profile at the CUP, normalised to fluence rate on axis, with
-        \SI{10.2}{\cm} diameter collimator}
+        Vertical neutron profile at the CUP, normalised to fluence rate on axis, with
+        \SI{10.2}{\cm} diameter collimator.
+    }
     \label{fig:CUPProfile}
 \end{figure}
 
+Fig.~\ref{fig:CUPDensity} shows equivalent data for the CUP, which is upstream of the collimator.
+In the central region the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.85e6}{\neutron\per\cm\squared\per\second}, compared to \SI{1.17e7}{\neutron\per\cm\squared\per\second} from an analytical model reported by Prokofiev et al.~\cite{Prokofiev2014}.
+The analytical model therefore exceeds the present calculations about 50\%.
+
+Fig.~\ref{fig:CUPProfile} shows the vertical neutron fluence profile at the CUP, compared with measurements made with \U238\ TFBCs.
+Results of calculations were folded in energy with the neutron fission cross section for \U238~\cite{Carlson2009}.
+The results show close agreement between measurement and simulation, although the sharp cut-off between about \SI{10}{\cm} and about \SI{15}{\cm} is not fully reproduced by the simulation.%
+\todo{
+    Improve presentation of results for CUP profile.
+    Make calculations at the same positions as those used for the measurements.
+}
+
 Fig.~\ref{fig:TOFSpectra} compares simulated and measured TOF spectra at the CUP-TOF position.
 Neutron time of flight data from the simulation were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
-The results show\ldots
-\todo{Explain what the results show.}
+The results show very close agreement in the position and width of the TOF peak.
+Prokofiev et al.~\cite{Prokofiev2014} note that the TOF spectrum at the CUP comprises three parts, a component directly from the target, one scattered forward from target surroundings, and one scattered backwards from the front face of the collimator block.
+The present simulations confirm the Prokofiev et al. semi-empirical multicomponent model. Details of this confirmation will be presented in the full paper but are omitted here for brevity.
+In this summary we limit ourselves to the observation that direct reproduction of the deceptively complex TOF spectrum, as shown by Fig.~\ref{fig:TOFSpectra} reflects the fidelity of the present model spectrum and geometry.\todo{Improve phrasing here.}
 
 \begin{figure}[t]
-    \includegraphics[width=\columnwidth]{CUPTOFtofspectraRADECS.png}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{CUPTOFtofspectraRADECS.png}
     \caption{
-        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} diameter collimator
+        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} diameter collimator.
         }
     \label{fig:TOFSpectra}
 \end{figure}
 
-Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with their respective analytical models.
-The SUP data are also compared with results from preliminary Geant4 simulations~\cite{Platt2013}.
-The results show\ldots
-\todo{Describe the neutron spectra.}
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
         \centering
-        \includegraphics[width=0.9\columnwidth]{SUPNormalisedRADECS.eps}
+        \includegraphics[width=0.8\columnwidth]{SUPNormalisedRADECS.eps}
         \subcaption{
             SUP.
-            The comparison is against the fit of Prokofiev et al.~\cite{Prokofiev2009} and preliminary Geant4 modelling by Platt et al.~\cite{Platt2013} }
+            The comparison is against the fit of Prokofiev et al.~\cite{Prokofiev2009} and preliminary Geant4 modelling by Platt et al.~\cite{Platt2013}
+        }
+        \label{fig:LethargyplotSUP}
     \end{minipage}
     \begin{minipage}{\columnwidth}
         \centering
-        \includegraphics[width=0.9\columnwidth]{CUPcomparedProkofiev2014NormalisedRADECS.eps}
+        \includegraphics[width=0.8\columnwidth]{CUPcomparedProkofiev2014NormalisedRADECS.eps}
         \subcaption{
             CUP.
             The comparison is against the fit of Prokofiev et al.~\cite{Prokofiev2014}
         }
+        \label{fig:LethargyplotCUP}
     \end{minipage}
 	\caption{
         Calculated neutron spectra, normalised to fluence above \SI{10}{\MeV}, with
@@ -210,34 +215,44 @@ The results show\ldots
 	\label{fig:Lethargyplots}
 \end{figure}
 
-Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the Prokofiev et al. models~\cite{Prokofiev2009,Prokofiev2014}.
-The SUP calculations and analytical model agree very closely below \SI{20}{\MeV}; the analytical model exceeds the calculations somewhat above that energy.
-At CUP the analytical model exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
-\todo{Improve precision of the summary description of differential spectra.}
-
-\begin{figure}[t]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=0.9\columnwidth]{DiffYieldComparedSUPCUP10.eps}
+    \includegraphics[width=0.8\columnwidth]{DiffYieldComparedSUPCUP10.eps}
     \caption{
         Differential neutron spectra at CUP and SUP (\SI{10.2}{\cm} diameter collimator), comparing results of this work to analytical models~\cite{Prokofiev2009,Prokofiev2014}
     }
     \label{fig:DifferentialSpectra}
 \end{figure}
 
+Fig.~\ref{fig:Lethargyplots} compares calculated spectra at SUP and CUP with their respective analytical models.
+The SUP data are also compared with results from preliminary Geant4 simulations~\cite{Platt2013}.
+These curves are normalised to neutron fluence above \SI{10}{\MeV} an presented as lethargy plots to emphasis the shape of the spectra rather than their integral fluence rate.
+The increased integral fluence rate at SUP from the present calculations, compared to the preliminary results of \cite{Platt2013} is therefore not visible in Fig.~\ref{fig:LethargyplotSUP}.
+Fig.~\ref{fig:LethargyplotSUP} does show an increased contribution below about \SI{1}{\MeV}, consistent with interactions in materials other than the target, which were absent from the preliminary simulations.
+Fig.~\ref{fig:LethargyplotCUP} shows extremely close agreement with the analytical model from~\cite{Prokofiev2014} (the analytical model smooths out the structure in the evaporation peak around \SI{1}{\MeV}).
+When compared to the analytical models the calculated spectra from the current work lead to slightly lower neutron yield and slightly higher peak energies in the higher energy peak near \SI{100}{\MeV}.
+It is not surprising that this is not affected by the improved model geometry as this peak arises from intranuclear cascades in the target.
+We continue to investigate this discrepancy and will discuss it further in our final paper.
+
+Fig.~\ref{fig:DifferentialSpectra} summarises neutron spectra results by comparing differential flux as calculated in this work with the Prokofiev et al. models~\cite{Prokofiev2009,Prokofiev2014}.
+The SUP calculations and analytical model agree very closely below \SI{20}{\MeV}; the analytical model exceeds the calculations somewhat above that energy.
+At CUP the analytical model exceeds the Geant4 calculations by about 50\%, slightly more than that above \SI{20}{\MeV}.
+
 \subsection{Photons}
-Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP.
+Fig.~\ref{fig:GammaSpatialDistribution} shows the calculated spatial distribution of gamma photons at SUP and CUP, and shows a gamma radiation distribution that is qualitatively very similar to that for neutrons at both locations.
 Fig.~\ref{fig:DifferentialGammaSpectra} shows the calculated differential gamma spectra within the central region of the spatial distribution.
-The results show\ldots
-\todo{Describe the gamma results}
+There is a broad continuum up to an energy of about \SI{10}{\MeV}, with a peak in the fluence spectrum at about \SI{0.5}{\MeV} (where the annihilation peak is visible).
+The gamma fluence rate is an order of magnitude greater at CUP that at SUP, consistent with the closer range to the target and its immediate surroundings.
+The CUP spectrum also shows a backscatter peak around \SI{0.2}{\MeV}.
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{SUP10ColSpatialDistributionAllG.png}
+        \includegraphics[width=0.9\columnwidth]{SUP10ColSpatialDistributionAllG.png}
         \subcaption{Standard User Position}
         \label{fig:GammaSpatialDistributionSUP}
     \end{minipage}
     \begin{minipage}{\columnwidth}
-        \includegraphics[width=\columnwidth]{CUP10ColSpatialDistributionAllG.png}
+        \includegraphics[width=0.9\columnwidth]{CUP10ColSpatialDistributionAllG.png}
         \subcaption{Close User Position}
         \label{fig:GammaSpatialDistributionCUP}
     \end{minipage}
@@ -258,12 +273,6 @@ The results show\ldots
     \label{fig:DifferentialGammaSpectra}
 \end{figure}
 
-Fig.~\ref{fig:GammaDoseEnergy} shows the calculated distribution of gamma dose, obtained by folding the gamma spectra (Fig~\ref{fig:GammaDoseEnergy}) with dose conversion data from \cite{Kwon1980}.
-The results show\ldots
-\todo{Describe the gamma dose versus energy graphs.}
-The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\milli\gray\per\hour} at SUP and \SI{370}{\milli\gray\per\hour} at CUP.
-\todo{Discuss calculated dose rates}
-
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
         \centering
@@ -283,6 +292,14 @@ The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\mil
     }
     \label{fig:GammaDoseEnergy}
 \end{figure}
+
+Fig.~\ref{fig:GammaDoseEnergy} shows the calculated distribution of gamma dose, obtained by folding the gamma spectra (Fig~\ref{fig:GammaDoseEnergy}) with dose conversion data from \cite{Kwon1980}.
+The results show structure with peaks around \SI{1.5}{\MeV}, \SI{3}{\MeV}, \SI{6}{\MeV} and \SI{9}{\MeV}.
+Note that these are not coincidence peaks, as the simulation counts individual photons.
+The calculated dose rate at \SI{200}{\nA} primary proton current is \SI{21}{\milli\seivert\per\hour} at SUP and \SI{370}{\milli\seivert\per\hour} at CUP.
+The calculated value at SUP is slightly more than and therefore consistent with that predicted from a bare spallation target (\SI{17}{\milli\seivert\per\hour}) and is also consistent with an estimated upper limit reported in~\cite{Prokofiev2009} (\SI{40}{\milli\seivert\per\hour}).
+The calculated value at CUP is consistent with that calculated at SUP (a ratio of 17:1 is somewhat greater than $1/R^2$, as would be expected), but rather more than the estimated upper limit given in \cite{Prokofiev2014} (\SI{170}{\milli\seivert\per\hour}).
+We continue to evaluate our gamma calculations and will discuss them at greater length in the final paper.
 
 \section{Discussion}
 \todo{Discussion}
