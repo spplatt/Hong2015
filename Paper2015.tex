@@ -1,5 +1,5 @@
 % Paper 2015
-\documentclass[11pt,a4paper]{IEEEtran}
+\documentclass[peerreviewca,11pt,a4paper]{IEEEtran}
 
 \usepackage{ifpdf}
 \usepackage{cite}
@@ -56,13 +56,20 @@
     Detailed Geant4 simulations of the ANITA and ANITA-CUP neutron facilities
 }
 
-\author{%
-    Q. Hong,
-    S. P. Platt,
-    A. V. Prokofiev,
-    E. Passoth
-    \thanks{%
-        Qian Hong and Simon Platt are with the University of Central Lancashire, England. Alexander Prokofiev and Elke Passoth are with the The Svedberg Laboratory, University of Uppsala, Sweden.
+\author{
+    \IEEEauthorblockN{
+        Q. Hong\IEEEauthorrefmark{1},
+        S. P. Platt\IEEEauthorrefmark{1},
+        A. V. Prokofiev\IEEEauthorrefmark{2} and
+        E. Passoth\IEEEauthorrefmark{2}
+    }
+    \IEEEauthorblockA{
+        \IEEEauthorrefmark{1}
+        University of Central Lancashire
+    }
+    \IEEEauthorblockA{
+        \IEEEauthorrefmark{2}
+        The Svedberg Laboratory, University of Uppsala
     }
 }
 
@@ -73,6 +80,8 @@
     \todo{Revise abstract}
 \end{abstract}
 
+\IEEEpeerreviewmaketitle
+
 \section{Introduction}
 
 The ANITA facility at The Svedberg Laboratory has been widely used for accelerated testing for neutron single-event effects (SEE)~\cite{Prokofiev2009}.
@@ -80,8 +89,8 @@ A high-flux facility, ANITA-CUP, has recently been introduced and reported by Pr
 
 Platt et al. have reported preliminary Monte Carlo models of neutron and gamma production at ANITA~\cite{Platt2013}.
 That work was motivated by a desire to understand the possibility of gamma sensitivity in detectors used for beam monitoring during SEE tests.
-Simulations of a bare spallation target showed demonstrating good qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility.
-The current work was motivation partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations model would lead to increased quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP.
+Simulations of a bare spallation target showed qualitative agreement with independent calculations and measurements of the fast neutron field at the standard ANITA facility.
+The present work was motivated partly by a desire to investigate whether improvements in the fidelity of the geometry used in the simulations would lead to closer quantitative agreement with independent data, and partly to extend the work to encompass the new facility at ANITA-CUP.
 
 Accordingly, in this paper we will present a comprehensive set of analyses of neutron and gamma fields at ANITA and ANITA-CUP, with comparison against independent models and validation against measurements.
 We present a subset of those results in this extended abstract.
