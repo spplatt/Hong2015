@@ -101,7 +101,7 @@ Accordingly, in this paper we present a comprehensive set of analyses of neutron
 We present a subset of those results in this extended abstract.
 
 \section{Modelling}
-Simulations were conducted using Geant4 version 10.0~\cite{Agostinelli2003,Allison2006} with the binary intranuclear cascade model~\cite{Platt2013}.
+Simulations were conducted using Geant4 version 10.0~\cite{Agostinelli2003,Allison2006} with the binary intranuclear cascade model (see also~\cite{Platt2013}).
 A detailed model of the ANITA geometry~\cite{Prokofiev2009,Prokofiev2014} was implemented in Geant4, as illustrated in Fig.~\ref{fig:ANITAoverview}.
 %; a summary only is given here.
 %The spallation target is a tungsten cylinder of diameter \SI{5}{\cm} and length \SI{2.4}{\cm}~\cite{ANITAdrawing}.
@@ -130,10 +130,10 @@ TFBC data are used to validate simulation results.
 \section{Results}
 
 \subsection{Neutrons}
-Fig.~\ref{fig:SUPDensity} shows neutron spatial distribution at the SUP, for neutrons above \SI{10}{\MeV}.
-Collimation is clearly visible.
-Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from an analytical model derived from measurements~\cite{Prokofiev2009}.
-The analytical model therefore exceeds the present calculations by about 30\%.
+Fig.~\ref{fig:SUPDensity} shows neutron distribution at the SUP, for neutrons above \SI{10}{\MeV}.
+The collimator ensures that the beam is circular. Within the beam umbra the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.1e5}{\neutron\per\cm\squared\per\second}, compared to \SI{5.7e5}{\neutron\per\cm\squared\per\second} from earlier calculations~\cite{Platt2013} and \SI{9.3e5}{\neutron\per\cm\squared\per\second} from measurements.
+The measurements therefore exceed the present calculations by about 30\%.
+\todo{Check SUP flux.}
 
 \begin{figure}[t]
     \begin{minipage}{\columnwidth}
@@ -143,6 +143,10 @@ The analytical model therefore exceeds the present calculations by about 30\%.
             Concentric white circles indicate nominal umbra and penumbra limits
         }
         \label{fig:SUPDensity}
+        \todo{
+            Fig.~\ref{fig:SUPDensity} replace with 1D profile for neutrons above \SI{10}{\MeV}.
+             Show position of collimator.
+        }
     \end{minipage}
     \begin{minipage}{\columnwidth}
         \includegraphics[width=0.9\columnwidth]{CUP10ColSpatialDistribution10MeV.png}
@@ -158,38 +162,49 @@ The analytical model therefore exceeds the present calculations by about 30\%.
     \centering
     \includegraphics[width=0.9\columnwidth]{CUPTOF10beamproRADECS.png}
     \caption{
-        Vertical neutron profile at the CUP, normalised to fluence rate on axis, with
-        \SI{10.2}{\cm} diameter collimator.
-    }
+        Vertical profile of \U238\ fission events at the CUP, with \SI{10.2}{\cm} diameter collimator. }
     \label{fig:CUPProfile}
+    \todo{
+        Fig.~\ref{fig:CUPProfile}.
+        Revise legend.
+        Plot lines +symbols.
+        Add vertical lines?
+    }
 \end{figure}
 
-Fig.~\ref{fig:CUPDensity} shows equivalent data for the CUP, which is upstream of the collimator.
-In the central region the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.85e6}{\neutron\per\cm\squared\per\second}, compared to \SI{1.17e7}{\neutron\per\cm\squared\per\second} from an analytical model reported by Prokofiev et al.~\cite{Prokofiev2014}.
-The analytical model therefore exceeds the present calculations about 50\%.
+Fig.~\ref{fig:CUPDensity} shows the spatial distribution of neutrons above \SI{10}{\MeV} at the CUP.
+As CUP is upstream of the collimator the distribution is not not circularly symmetric.
+In the central region the calculated neutron fluence rate above \SI{10}{\MeV} at a proton current of \SI{200}{\nA} is \SI{7.85e6}{\neutron\per\cm\squared\per\second}, compared to \SI{1.17e7}{\neutron\per\cm\squared\per\second} from measurements~\cite{Prokofiev2014}.
+The measurements therefore exceeds the present calculations about 50\%.
+\todo{Check current consistency -- make \SI{215}{\nA}, check Elke's report.}
 
-Fig.~\ref{fig:CUPProfile} shows the vertical neutron fluence profile at the CUP, compared with measurements made with \U238\ TFBCs.
-Results of calculations were folded in energy with the neutron fission cross section for \U238~\cite{Carlson2009}.
-The results show close agreement between measurement and simulation, although the sharp cut-off between about \SI{10}{\cm} and about \SI{15}{\cm} is not fully reproduced by the simulation.%
+TFBCs equipped with \U238\ targets were used to measure beam profile and time of flight spectra at the CUP-TOF position.
+Simulated neutron counts were folded in energy with the \U238\ fission cross-section~\cite{Carlson2009} and compared with measurements.
+Fig.~\ref{fig:CUPProfile} shows the resulting vertical distribution of the neutron-induced fission rate in \U238.
+The results show close agreement between measurement and simulation, although the sharp cut-off beyond \SI{11}{\cm} is not fully reproduced by the simulation.%
 \todo{
     Improve presentation of results for CUP profile.
     Make calculations at the same positions as those used for the measurements.
 }
 
-Fig.~\ref{fig:TOFSpectra} compares simulated and measured TOF spectra at the CUP-TOF position.
-Neutron time of flight data from the simulation were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
+In Fig.~\ref{fig:TOFSpectra} we compare simulated and measured TOF spectra at the CUP-TOF position.
+Neutron TOF data from the simulation were folded in energy with the \U238\ fission cross-section, convolved with a \SI{5}{\ns} rectangle function approximating the primary proton micropulse shape, and overlapped at \SI{45}{\ns}, representing the timing ambiguity due to the micropulse period.
 The results show very close agreement in the position and width of the TOF peak.
+The continuum beyond about \SI{30}{\ns}, corresponding to neutrons below about \SI{40}{\MeV}, is somewhat higher in the calculation than in the measurement.
+This might indicate a relative overestimate of lower energy neutrons in the calculations -- or an corresponding underestimate of higher-energy neutrons.
 Prokofiev et al.~\cite{Prokofiev2014} note that the TOF spectrum at the CUP comprises three parts, a component directly from the target, one scattered forward from target surroundings, and one scattered backwards from the front face of the collimator block.
 The present simulations confirm the Prokofiev et al. semi-empirical multicomponent model. Details of this confirmation will be presented in the full paper but are omitted here for brevity.
-In this summary we limit ourselves to the observation that direct reproduction of the deceptively complex TOF spectrum, as shown by Fig.~\ref{fig:TOFSpectra} reflects the fidelity of the present model spectrum and geometry.\todo{Improve phrasing here.}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.9\columnwidth]{CUPTOFtofspectraRADECS.png}
     \caption{
-        Neutron time of flight spectra at the CUP-TOF position, with \SI{3}{\cm} diameter collimator.
+        Time of flight spectra for \U238 fission events at the CUP-TOF position, with \SI{3}{\cm} diameter collimator.
         }
     \label{fig:TOFSpectra}
+    \todo{
+        Figure:~\ref{fig:TOFSpectra}: Edit legend, edit y label, make simulated data a curve.
+    }
 \end{figure}
 
 
