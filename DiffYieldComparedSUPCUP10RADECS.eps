@@ -1,9 +1,10 @@
-%!PS-Adobe-2.0 EPSF-1.2
+%!PS-Adobe-3.0 EPSF-3.0
 %%Creator: MATLAB, The MathWorks, Inc. Version 8.3.0.532 (R2014a). Operating System: Microsoft Windows 7 Enterprise .
-%%Title: .\DiffYieldComparedSUPCUP10.eps
-%%CreationDate: 04/20/2015  16:54:37
+%%Title: .\DiffYieldComparedSUPCUP10RADECS.eps
+%%CreationDate: 04/20/2015  18:02:46
 %%DocumentNeededFonts: Helvetica
 %%DocumentProcessColors: Cyan Magenta Yellow Black
+%%LanguageLevel: 2
 %%Pages: 1
 %%BoundingBox:    46   195   547   592
 %%EndComments
@@ -143,12 +144,17 @@ ISOLatin1Encoding WindowsLatin1Encoding copy pop
   smat stri tri_to_matrix tmat2 concatmatrix } bdef
 /ds {stri astore pop} bdef
 /dt {dtri astore pop} bdef
-/db {2 copy /cols xdef /rows xdef mul dup string
-  currentfile exch readhexstring pop
-  /bmap xdef pop pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile 
+  3 index 0 eq {/ASCIIHexDecode filter}
+  {/ASCII85Decode filter 3 index 2 eq {/RunLengthDecode filter} if }
+  ifelse exch readstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
 /it {gs np dtri aload pop moveto lineto lineto cp c
   cols rows 8 compute_transform 
-  {bmap} image gr}bdef
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
 /il {newpath moveto lineto stroke}bdef
 currentdict end def
 %%EndProlog
@@ -174,7 +180,7 @@ bplot
 /dpi2point 12 def
 portraitMode 0216 7344 csm
 
-  340   236  6011  4757 MR c np
+  340   236  6011  4757 rc
 85 dict begin %Colortable dictionary
 /c0 { 0.000000 0.000000 0.000000 sr} bdef
 /c1 { 1.000000 1.000000 1.000000 sr} bdef
@@ -187,7 +193,7 @@ portraitMode 0216 7344 csm
 c0
 1 j
 1 sg
-   0    0 6919 5187 PR
+   0    0 6919 5187 rf
 12 w
 0 4227 5362 0 0 -4227 899 4616 4 MP
 PP
@@ -677,8 +683,10 @@ SO
  899 4616 mt 6261 4616 L
 6261 4616 mt 6261  389 L
  899 4616 mt  899  389 L
-gs 899 389 5363 4228 MR c np
+gs 899 389 5363 4228 rc
 30 w
+/c8 { 0.000000 0.000000 1.000000 sr} bdef
+c8
 79 548 79 136 80 64 79 29 80 32 79 30 80 17 79 18 
 80 6 79 15 79 19 80 12 79 28 80 27 79 26 80 40 
 79 32 80 35 79 24 80 16 79 30 79 29 80 37 79 44 
@@ -689,6 +697,8 @@ gs 899 389 5363 4228 MR c np
 79 -65 80 -13 79 2 79 -63 80 147 79 -63 80 31 79 24 
 80 -50 79 -28 4 -1 899 1218 68 MP stroke
 DA
+/c9 { 1.000000 0.000000 0.000000 sr} bdef
+c9
 79 175 79 149 80 124 79 99 80 73 79 48 80 23 79 10 
 80 11 79 10 79 11 80 11 79 11 80 12 79 14 80 14 
 79 17 80 20 79 23 80 28 79 33 79 39 80 45 79 52 
@@ -699,6 +709,7 @@ DA
 79 0 80 0 79 0 79 0 80 0 79 -1 80 0 79 0 
 80 0 79 0 4 0 899 1080 68 MP stroke
 SO
+c8
 79 538 79 133 80 34 79 28 80 18 79 12 80 60 79 6 
 80 -15 79 32 79 -28 80 32 79 31 80 14 79 15 80 35 
 79 30 80 52 79 26 80 -33 79 77 79 10 80 16 79 68 
@@ -709,6 +720,7 @@ SO
 79 -37 80 -17 79 -3 79 -45 80 121 79 -68 80 57 79 -33 
 80 -65 79 19 4 -1 899 2111 68 MP stroke
 DA
+c9
 79 144 79 125 80 104 79 85 80 64 79 43 80 24 79 7 
 80 5 79 6 79 6 80 5 79 6 80 6 79 7 80 7 
 79 8 80 10 79 13 80 15 79 21 79 27 80 34 79 43 
@@ -721,7 +733,9 @@ DA
 gr
 
 30 w
+c9
 DA
+0 sg
 %%IncludeResource: font Helvetica
 /Helvetica /WindowsLatin1Encoding 120 FMSR
 
@@ -791,22 +805,27 @@ SO
 4403  783 mt 4403  449 L
 4873  584 mt 
 (simulation, present work) s
-gs 4403 449 1800 335 MR c np
+gs 4403 449 1800 335 rc
 30 w
+c8
 361 0 4475 541 2 MP stroke
 gr
 
 30 w
+c8
+0 sg
 4873  733 mt 
 (fits [1][2]) s
-gs 4403 449 1800 335 MR c np
+gs 4403 449 1800 335 rc
 DA
+c9
 361 0 4475 690 2 MP stroke
 SO
 6 w
 gr
 
 6 w
+c9
 
 end %%Color Dict
 
